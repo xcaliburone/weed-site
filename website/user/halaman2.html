@@ -1,0 +1,608 @@
+<!doctype html>
+<html>
+<head>
+	<title>KELINCI PERCOBAAN KEDUA</title>
+</head>
+<body bgcolor="lightblue">
+	<p><h1>ini halaman 2</h1></p>
+	<hr>
+	<br><br><br><br><br>
+	<p> Klik <a href="../halaman1.html" target="_blank">disini</a> untuk kembali ke halaman 1</p>
+	
+	<!-- relative url -->
+	<!-- ini cara pindah halaman yang memiliki folder atau tempat penyimpanan yang berbeda -->
+	<p> Klik <a href="../admin/halaman3.html" target="_blank">disini</a> untuk ke halaman 3</p>
+
+	<br><br><br><br><br><hr><br><br><br><br><br>
+
+	<!-- tabel pada html -->
+	<p>Ini merupakan penggunaan table simple</p>
+	<table border="1" cellspacing="0" cellpadding="5">
+		<tr>
+			<td>Baris 1, Kolom 1</td>
+			<td>Baris 1, Kolom 2</td>
+		</tr>
+		<tr>
+			<td>Baris 2, Kolom 1</td>
+			<td>Baris 2, Kolom 2</td>
+		</tr>
+	</table>
+
+	<br><br><br><br><br><hr><br><br><br>
+	<p>Ini merupakan table penggunaan complex</p>
+	<table border="1" cellspacing="0" cellpadding="9">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Kolom 1</th>
+				<th>Kolom 2</th>
+				<th>Kolom 3</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Baris 1</th>
+				<td>Baris 1, Kolom 1</td>
+				<td>Baris 1, Kolom 2</td>
+				<td>Baris 1, Kolom 3</td>
+			</tr>
+			<tr>
+				<th>Baris 2</th>
+				<td>Baris 2, Kolom 1</td>
+				<td>Baris 2, Kolom 2</td>
+				<td>Baris 2, Kolom 3</td>
+			</tr>
+			<tr>
+				<th>Baris 3</th>
+				<td>Baris 3, Kolom 1</td>
+				<td>Baris 3, Kolom 2</td>
+				<td>Baris 3, Kolom 3</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br><br><br><hr><br><br>
+	<p>Ini merupakan penggunaan colspan</p>
+	<table border="1" cellspacing="0" cellpadding="9">
+		<tr>
+			<td>1,1</td>
+			<td colspan="2">Colspan 2</td>
+		</tr>
+		<tr>
+			<td>2,1</td>
+			<td>2,2</td>
+			<td>2,3</td>
+		</tr>
+		<tr>
+			<td>3,1</td>
+			<td>3,2</td>
+			<td>3,3</td>
+		</tr>
+	</table>
+	<br><br><hr><br><br>
+	<p>Ini merupakan penggunaan rowspan</p>
+	<table border="1" cellspacing="0" cellpadding="9">
+		<tr>
+			<td rowspan="3">Rowspan 3</td> <!-- karena ingin menggabungkan 3 baris -->
+			<td colspan="2">Colspan 2</td> <!-- karena ingin menggabungkan 2 kolom -->
+		</tr>
+		<tr>
+			<td>2,2</td>
+			<td>2,3</td>
+		</tr>
+		<tr>
+			<td>3,2</td>
+			<td>3,3</td>
+		</tr>
+	</table>
+	<br><br><hr><br><br>
+	<p>Ini merupakan tugas menggabungkan colspan dan rowspan</p>
+	<table border="1" cellspacing="0" cellpadding="9">
+		<tr>
+			<td>1,1</td>
+			<td>1,2</td>
+			<td>1,3</td>
+			<td>1,4</td>
+		</tr>
+		<tr>
+			<td>2,1</td>
+			<td>2,2</td>
+			<td>2,3</td>
+			<td>2,4</td>
+		</tr>
+		<tr>
+			<td>3,1</td>
+			<td>3,2</td>
+			<td>3,3</td>
+			<td>3,4</td>
+		</tr>
+		<tr>
+			<td>4,1</td>
+			<td>4,2</td>
+			<td>4,3</td>
+			<td>4,4</td>
+		</tr>
+	</table>
+	<p>Kemudian diubah menjadi, </p>
+	<table border="1" cellspacing="0" cellpadding="9">
+		<tr>
+			<td>1,1</td>
+			<td>1,2</td>
+			<td>1,3</td>
+			<td>1,4</td>
+		</tr>
+		<tr>
+			<td>2,1</td>
+			<td colspan="2" rowspan="2" style="text-align: center;">?</td>
+			<td>2,4</td>
+		</tr>
+		<tr>
+			<td>3,1</td>
+			<td>3,4</td>
+		</tr>
+		<tr>
+			<td>4,1</td>
+			<td>4,2</td>
+			<td>4,3</td>
+			<td>4,4</td>
+		</tr>
+	</table>
+	<br><br><hr><br><br>
+	<table border="1" cellspacing="0" cellpadding="9">
+		<thead>
+			<tr style="background-color: rgb(144, 250, 236);">
+				<th>No.</th>
+				<th>Mata Kuliah</th>
+				<th>Senin</th>
+				<th>Selasa</th>
+				<th>Rabu</th>
+				<th>Kamis</th>
+				<th>Jumat</th>
+				<th>SKS</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th rowspan="2" style="background-color: white;">01</th>
+				<td rowspan="2" style="background-color: white;">Dasar Pemrograman Komputer</td>
+				<td style="background-color: white;">07.30-10.00</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td rowspan="2" style="background-color: white;">3</td>
+			</tr>
+			<tr>
+				<td style="background-color: white;">10.00-12.30</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">02</th>
+				<td style="background-color: white;">Sistem Digital</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">07.30-10.00</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">3</td>
+			</tr>
+			<tr>
+				<th rowspan="3" style="background-color: white;">03</th>
+				<td rowspan="3" style="background-color: white;">Pengantar Teknologi Informasi</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">10.00-12.30</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td rowspan="3" style="background-color: white;">2</td>
+			</tr>
+			<tr>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">13.00-15.30</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+			</tr>
+			<tr>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">15.30-17.10</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">04</th>
+				<td style="background-color: white;">Kewarganegaraan</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">09.40-11.10</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">2</td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">05</th>
+				<td style="background-color: white;">Matematika Dasar I</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">08.00-09.30</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">3</td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">06</th>
+				<td style="background-color: white;">Dasar Listrik dan Elektronika</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">11.20-12.50</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">2</td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">07</th>
+				<td style="background-color: white;">Bahasa Indonesia</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">13.20-14.50</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">2</td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">08</th>
+				<td style="background-color: white;">Wawasan IPTEK</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">13.20-14.50</td>
+				<td style="background-color: white;">2</td>
+			</tr>
+			<tr>
+				<th style="background-color: rgb(155, 155, 155);"></th>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<th style="background-color: white;">Total SKS</th>
+				<th style="background-color: white;">19</th>
+			</tr>
+			<tr>
+				<th style="background-color: rgb(155, 155, 155);"></th>
+				<th colspan="6" style="background-color: white;"><i>Rencana tambahan, maksimal 5 SKS</i></th>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">01</th>
+				<td style="background-color: white;">Aljabar Linear</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">10.00-12.30</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">3</td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">02</th>
+				<td style="background-color: white;">Basis Data</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">10.00-12.30</td>
+				<td style="background-color: white;">2</td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">03</th>
+				<td style="background-color: white;">Arsitektur dan Organisasi Komputer</td>
+				<td style="background-color: white;">13.00-15.30</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">3</td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">04</th>
+				<td style="background-color: white;">Pemrograman Berorientasi Obyek</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">07.30-10.00</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">3</td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">05</th>
+				<td style="background-color: white;">Interaksi Manusia dan Komputer</td>
+				<td style="background-color: white;">10.00-12.30</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">13.00-15.30</td>
+				<td style="background-color: white;">2</td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">06</th>
+				<td style="background-color: white;">Teori Bahasa dan Otomata</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">15.30-17.10</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">13.00-15.30</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">2</td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">07</th>
+				<td style="background-color: white;">Pemrograman Script</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">07.30-10.00</td>
+				<td style="background-color: white;">2</td>
+			</tr>
+			<tr>
+				<th rowspan="2" style="background-color: white;">08</th>
+				<td rowspan="2" style="background-color: white;">Kecerdasan Buatan</td>
+				<td rowspan="2" style="background-color: rgb(155, 155, 155);"></td>
+				<td rowspan="2" style="background-color: rgb(155, 155, 155);"></td>
+				<td rowspan="2" style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">10.00-12.30</td>
+				<td rowspan="2" style="background-color: rgb(155, 155, 155);"></td>
+				<td rowspan="2" style="background-color: white;">3</td>
+			</tr>
+			<tr>
+				<td style="background-color: white;">15.30-17.30</td>
+			</tr>
+		</tbody>
+	</table>
+	<br><br><hr><br><br>
+	<table border="1" cellspacing="0" cellpadding="9">
+		<thead>
+			<tr style="background-color: rgb(144, 250, 236);">
+				<th>No.</th>
+				<th>Mata Kuliah</th>
+				<th>Senin</th>
+				<th>Selasa</th>
+				<th>Rabu</th>
+				<th>Kamis</th>
+				<th>Jumat</th>
+				<th>SKS</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th rowspan="2" style="background-color: white;">01</th>
+				<td rowspan="2" style="background-color: white;">Dasar Pemrograman Komputer</td>
+				<td rowspan="2" style="background-color: white;">10.00-12.30</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td rowspan="2" style="background-color: white;">3</td>
+			</tr>
+			<tr>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">02</th>
+				<td style="background-color: white;">Sistem Digital</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">07.30-10.00</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">3</td>
+			</tr>
+			<tr>
+				<th rowspan="3" style="background-color: white;">03</th>
+				<td rowspan="3" style="background-color: white;">Pengantar Teknologi Informasi</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td rowspan="3" style="background-color: white;">15.30-17.10</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td rowspan="3" style="background-color: white;">2</td>
+			</tr>
+			<tr>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+			</tr>
+			<tr>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">04</th>
+				<td style="background-color: white;">Kewarganegaraan</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">09.40-11.10</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">2</td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">05</th>
+				<td style="background-color: white;">Matematika Dasar I</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">08.00-09.30</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">3</td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">06</th>
+				<td style="background-color: white;">Dasar Listrik dan Elektronika</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">11.20-12.50</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">2</td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">07</th>
+				<td style="background-color: white;">Bahasa Indonesia</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">13.20-14.50</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">2</td>
+			</tr>
+			<tr>
+				<th style="background-color: white;">08</th>
+				<td style="background-color: white;">Wawasan IPTEK</td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: white;">13.20-14.50</td>
+				<td style="background-color: white;">2</td>
+			</tr>
+			<tr>
+				<th style="background-color: rgb(155, 155, 155);"></th>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<td style="background-color: rgb(155, 155, 155);"></td>
+				<th style="background-color: white;">Total SKS</th>
+				<th style="background-color: white;">19</th>
+			</tr>
+		</tbody>
+		</table>
+
+
+
+		<br><br><hr><br><br>
+		<table border="1" cellspacing="0" cellpadding="9">
+			<thead>
+				<tr style="background-color: rgb(144, 250, 236);">
+					<th>No.</th>
+					<th>Mata Kuliah</th>
+					<th>Senin</th>
+					<th>Selasa</th>
+					<th>Rabu</th>
+					<th>Kamis</th>
+					<th>Jumat</th>
+					<th>SKS</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th rowspan="2" style="background-color: white;">01</th>
+					<td rowspan="2" style="background-color: white;">Dasar Pemrograman Komputer</td>
+					<td rowspan="2" style="background-color: white;">07.30-10.00</td>
+					<td rowspan="2" style="background-color: rgb(155, 155, 155);"></td>
+					<td rowspan="2" style="background-color: rgb(155, 155, 155);"></td>
+					<td rowspan="2" style="background-color: rgb(155, 155, 155);"></td>
+					<td rowspan="2" style="background-color: rgb(155, 155, 155);"></td>
+					<td rowspan="2" style="background-color: white;">3</td>
+				</tr>
+				<tr>
+				</tr>
+				<tr>
+					<th style="background-color: white;">02</th>
+					<td style="background-color: white;">Sistem Digital</td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: white;">07.30-10.00</td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: white;">3</td>
+				</tr>
+				<tr>
+					<th rowspan="3" style="background-color: white;">03</th>
+					<td rowspan="3" style="background-color: white;">Pengantar Teknologi Informasi</td>
+					<td rowspan="3" style="background-color: rgb(155, 155, 155);"></td>
+					<td rowspan="3" style="background-color: white;">13.00-15.30</td>
+					<td rowspan="3" style="background-color: rgb(155, 155, 155);"></td>
+					<td rowspan="3" style="background-color: rgb(155, 155, 155);"></td>
+					<td rowspan="3" style="background-color: rgb(155, 155, 155);"></td>
+					<td rowspan="3" style="background-color: white;">2</td>
+				</tr>
+				<tr>
+				</tr>
+				<tr>
+				</tr>
+				<tr>
+					<th style="background-color: white;">04</th>
+					<td style="background-color: white;">Kewarganegaraan</td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: white;">09.40-11.10</td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: white;">2</td>
+				</tr>
+				<tr>
+					<th style="background-color: white;">05</th>
+					<td style="background-color: white;">Matematika Dasar I</td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: white;">09.40-11.10</td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: white;">3</td>
+				</tr>
+				<tr>
+					<th style="background-color: white;">06</th>
+					<td style="background-color: white;">Dasar Listrik dan Elektronika</td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: white;">11.20-12.50</td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: white;">2</td>
+				</tr>
+				<tr>
+					<th style="background-color: white;">07</th>
+					<td style="background-color: white;">Bahasa Indonesia</td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: white;">14.40-16.20</td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: white;">2</td>
+				</tr>
+				<tr>
+					<th style="background-color: white;">08</th>
+					<td style="background-color: white;">Wawasan IPTEK</td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: white;">09.40-11.10</td>
+					<td style="background-color: white;">2</td>
+				</tr>
+				<tr>
+					<th style="background-color: rgb(155, 155, 155);"></th>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<td style="background-color: rgb(155, 155, 155);"></td>
+					<th style="background-color: white;">Total SKS</th>
+					<th style="background-color: white;">19</th>
+				</tr>
+			</tbody>
+			</table>
+</body>
+</html>

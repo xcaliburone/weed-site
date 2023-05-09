@@ -1,0 +1,517 @@
+html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; 
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* clearfix */
+.cf:before, .cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}  
+           
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/* BOX MODEL : MARGIN*/
+div.satu {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+div.dua {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    display: inline-block;
+}
+
+div.tiga {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+div.empat {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+div.lima {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    display: inline-block;
+    margin-right: -50px;
+}
+
+div.enam {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    display: inline-block;
+    /* margin-left: 10px; */
+}
+
+div.border1 {
+    background-color: royalblue;
+    padding: 10px;
+    border: 5px solid red;
+    box-sizing: border-box;
+}
+
+div.border2 {
+    margin: 10px auto;
+    background-color: blue;
+    padding: 30px;
+    border: 10px dashed orange;
+}
+
+div.kotaksatu {
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+}
+
+div.kotakdua {
+    width: 100px;
+    height: 100px;
+    background-color: limegreen;
+    float: right;
+}
+
+div.kotaktiga {
+    width: 100px;
+    height: 100px;
+    background-color: lightskyblue;
+}
+
+div.containerkotak, .wrapping-text {
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+    overflow: auto;
+}
+
+div.image-gallery {
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+
+.kotakempat, .kotaklima, .kotakenam {
+    width: 100px;
+    height: 100px;
+}
+
+div.kotakempat {
+    background-color: salmon;
+}
+
+div.kotaklima {
+    background-color: limegreen;
+    float: right;
+}
+
+div.kotakenam {
+    background-color: lightskyblue;
+}
+
+img.chip {
+    float: left;
+    margin: 5px;
+}
+
+div.image-gallery .gambarkotak {
+    width: 80px;
+    height: 80px;
+    background-color: salmon;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20;
+    margin: 2px;
+    display: inline-block;
+}
+
+div.image-gallery .gambarkotakk {
+    width: 80px;
+    height: 80px;
+    background-color: salmon;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20;
+    margin: 2px;
+    float: left;
+}
+
+div.image-gallery .gambarkotakkk {
+    width: 80px;
+    height: 80px;
+    background-color: salmon;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20;
+    margin: 2px;
+    float: right;
+}
+
+div.multi-column {
+    width: 800px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+
+div.multi-column .multi-kiri {
+    width: 150px;
+    height: 250px;
+    background-color: salmon;
+    float: left;
+}
+
+div.multi-column .multi-tengah {
+    width: 500px;
+    height: 250px;
+    background-color: lightskyblue;
+    float: left;
+}
+
+div.multi-column .multi-kanan {
+    width: 150px;
+    height: 250px;
+    background-color: limegreen;
+    float: left;
+}
+
+div.multi-column .multi-kirii {
+    width: 300px;
+    height: 200px;
+    background-color: salmon;
+    float: left;
+}
+
+div.multi-column .multi-tengahh {
+    width: 500px;
+    height: 200px;
+    background-color: lightskyblue;
+    float: left;
+}
+
+div.multi-column .multi-kanann {
+    width: 800px;
+    height: 100px;
+    background-color: limegreen;
+    margin-top: 200px;
+}
+
+div.position-satu {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    position: static;  /* default */
+}
+
+div.position-dua {
+    width: 200px;
+    height: 200px;
+    background-color: violet;
+    position: relative;
+    top: 30px;
+}
+
+div.position-tiga {
+    width: 200px;
+    height: 200px;
+    background-color: gold;
+    margin-left: 30px;
+}
+
+div.position2 {
+    width: 200px;
+    height: 600px;
+    margin-right: 300px;
+    margin-top: -600px;
+    float: right;
+}
+
+div.position-empat {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+}
+
+div.position-lima {
+    width: 200px;
+    height: 200px;
+    background-color: violet;
+    left: 1090px;
+    position: absolute;
+}
+
+div.position-enam {
+    width: 200px;
+    height: 200px;
+    background-color: gold;
+}
+
+.position #posisi-teks p {
+    color: aqua;
+}
+
+.position #posisi-teks2 p {
+    color: aqua;
+    float: right;
+    margin-top: -37px;
+    margin-right: 430px;
+}
+
+div.position3 {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    border: 3px solid black;
+    position: relative;
+}
+
+div.position-tujuh {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: lightgreen;
+}
+
+div.position-delapan {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: violet;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+div.position-sembilan {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: gold;
+}
+
+div.position4 {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    border: 3px solid black;
+    position: relative;
+}
+
+div.position-sepuluh {
+    margin: auto;
+    width: 100px;
+    height: 200px;
+    background-color: lightgreen;
+}
+
+div.position-sebelas {
+    margin: auto;
+    width: 100px;
+    height: 200px;
+    background-color: violet;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+div.position-duabelas {
+    margin: auto;
+    width: 100px;
+    height: 200px;
+    background-color: gold;
+}
+
+div.position-tigabelas {
+    margin: auto;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(55, 168, 202);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+img.ig_logo {
+    width: 37px;
+    height: 36px;
+}
+
+a button.ig_button {
+    background: rgb(55, 168, 202);
+    border: 1px solid rgb(55, 168, 202);
+    border-radius: 4px;
+    box-shadow: rgb(55, 168, 202) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 18px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    margin: 2px;
+    /* float: left; */
+    width: 170px;
+    position: absolute;
+    right: 0;
+    left: 40px;
+}
+
+.ig_button:hover {
+    background-color: initial;
+    background-position: 0 0;
+    color: salmon;
+}
+
+.ig_button:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: salmon;
+}
+
+.ig_button:active {
+    opacity: .5;
+}
+
+.z-index {
+    border: 3px solid black;
+    width: 600px;
+    height: 600px;
+    position: relative;
+    margin: auto;
+}
+
+.index-satu {
+    background-color: salmon;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 10;
+}
+
+.index-dua {
+    background-color: lightgreen;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 9999;
+}
+
+.index-tiga {
+    background-color: royalblue;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    z-index: -9999;
+}
+
+.iklan {
+    /* background-color: black; */
+    opacity: 0.7;
+    position: fixed;
+    top: 100px;
+    bottom: 100px;
+    left: 210px;
+    right: 210px;
+    z-index: 99999;
+}
+
+.close-button {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    right: -12px;
+}
+
+.button-close {
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    top: -25%;
+    right: 0;
+    display: none;
+}
+
+.video-iklan, source {
+    width: 1250px;
+    height: 700px;
+    /* background-color: yellowgreen; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    right: 0;
+}
+
+/* .video {
+    background-color: red;
+    width: 1200px;
+    height: 600px;
+    margin-top: 5px;
+    margin-left: 60px;
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    opacity: 1;
+} */

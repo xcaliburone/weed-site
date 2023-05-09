@@ -1,0 +1,399 @@
+CSS LAYOUTING INTRO CSS3:
+    A. adalah teknik css untuk mengatur dan meletakkan / memposisikan elemen-elemen html yang sudah kita buat menggunakan syntax css.
+       jadi kita dapat mengatur ukuran, posisi, ataupun perilaku dari elemen-elemen html tersebut.
+    B. yang perlu dipelajari terlebih dahulu
+        a. html dasar
+        b. css dasar
+    C. yang akan dipelajari
+        a. display
+        b. dimensi
+        c. overflow
+        d. box model
+        e. float
+        f. position
+    D. final output
+        kita akan membuat website sederhana dengan menggabungkan teknik-teknik yang telah dipelajari
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+TAG HTML <div> & <span>
+    A. tag <div> & <span> tdk memiliki arti apapun, keduanya digunakan untuk mengelompokkan tag-tag html & memberikan informasi tag-tag tersebut.
+    B. <div> dapat diberi class guna mengelompokkan part-part pada website.
+    C. class pada <div> kemudian dapat dengan mudah diberi gaya pada <style></style>
+    D. <span> biasanya ditempatkan didalam teks untuk penanda.
+    E. secara semantik mereka tidak memiliki makna dan hanya untuk pengelompokan saja.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CSS DISPLAY
+    1. <div> dan <span> memiliki properti display. dan semua element html memiliki property display default.
+    2. default display pada <div> adalah /* display: block; */
+    3. default display pada <span> adalah /* display: inline; */
+    A. setiap tag pada html berada didalam sebuah kotak. properti display pada css mengatur perilaku dari kotak tersebut.
+    B. setiap tag pada html memiliki nilai default untuk properti display. tetapi kita juga dapat mengubah perilaku dari tag tersebut dengan
+       mengganti value nya walaupun tidak disarankan untuk diubah.
+    C. value dari display
+        a. inline
+        b. inline-block
+        c. block
+        d. none
+    D. inline
+        a. adalah element html yang secara default tidak menambahkan baris baru ketika dibuat.
+        b. lebar dan tinggi element nya sebesar konten yang ada didalam nya.
+        c. kita tidak dapat mengatur tinggi dan lebar dari element inline tersebut.
+        d. tag <img> adalah satu-satunya element default display inline yang dapat diatur tinggi dan lebarnya.
+        e. margin dan padding hanya akan mempengaruhi element secara horizontal, tidak vertikal.
+        f. element-element html yang memiliki default display inline yaitu,
+            - b                     - sub
+            - strong                - sup
+            - i                     - button
+            - em                    - input
+            - a                     - label
+            - span                  - select
+            - textarea
+    E. inline-block
+        a. tidak ada element yang secara default memiliki properti display inline-block
+        b. kita harus mengubah secara manual properti tersebut
+        c. perilaku dasar sama dengan element inline jadi dia tetap berada pada garis yang sama bukan dibawah nya
+        d. element inline-block dapat diatur tinggi dan lebarnya
+    F. block
+        a. element html yang secara default menambahkan baris baru ketika dibuat
+        b. jika tidak diatur lebarnya, maka lebar default dari element block akan memenuhi lebar dari browser / parent nya
+        c. kita dapat mengatur tinggi dan lebar dari element block
+        d. di dalam element block, kita dapat menyimpan tag dengan element inline, inline-block, atau bahkan element block lagi.
+        e. element-element html yang memiliki default display block yaitu,
+            - h1 sampai h6          - li
+            - p                     - form
+            - ol                    - hr
+            - ul                    - div
+    G. none
+        digunakan untuk menghilangkan sebuah element
+    H. mengubah display default dari sebuah element
+        a. misal terdapat suatu list menggunakan /* ul>li*5>a[href=#]{Link $} */
+    /*     <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Link 5</a></li>
+           </ul> */
+           kemudian pada tag <style> tambahkan,
+    /*     li {
+            display: inline;
+           } */
+           maka hasilnya link link tersebut akan berubah menjadi sebaris
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+DIMENSI
+    A. properti untuk dimensi
+        a. width   ,untuk mengatur lebar
+        b. height  ,untuk mengatur tinggi
+    B. contoh, tag <div> adalah tag yg tdk memiliki arti apapun, dan tdk terlihat pengaruhnya. maka diberi style dan dimensi agar dapat terlihat.
+        a. pada body html terdapat
+           /* <div>Hello World</div> */
+        b. kemudian pada head diberi
+           /* <style>
+                div {
+                    width: 200px;
+                    height: 200px;
+                    background-color: lightgreen;
+                }
+           </style> */
+        c. sekarang terlihat ukuran dari div. kenapa ukurannya bisa kita atur? karena default display <div> adalah block.
+    C. satuan dimensi ( width & height )
+        a. px                 ,satuan yang absolute jadi nilainya pasti
+        b. %                  ,satuan yang nilainya relative terhadap element parent nya / pembungkusnya
+        c. in, cm, mm, pt, pc ,satuan yang diambil dari dunia nyata
+    D. jika hanya memberikan width saja, maka height nya relative terhadap content
+       jika widht dan height kekecilan, maka content akan keluar dari widht dan height tersebut karena tidak muat
+       lalu bagaimana agar content tidak keluar tapi dimensinya absolute?
+
+OVERFLOW
+    A. overflow adalah properti css yang akan digunakan untuk mengatur perilaku element yang kasus seperti diatas yaitu keluar dari parent nya
+    B. value dari property overflow
+        a. visible ,adalah default yang artinya jika ada content yang kelaur dari parent maka dia akan diperlihatkan
+        b. auto    ,css secara otomatis akan menambahkan scroll ketika content sudah tidak cukup lagi, jika cukup scroll menghilang
+        c. hidden , content yang keluar dari parent akan disembunyikan dan tidak dapat diakses
+        d. scroll , sama seperti pada auto, tapi walaupun content cukup, scroll tetap ada
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+BOX MODEL
+    A. konsep dasar
+        a. setiap element di halaman berada di dalam sebuah box / kotak
+        b. kita bisa mengatur ukuran dan posisi kotak tersebut
+        c. kita bisa memberi warna / gambar sebagai backgroundkotak tersebut
+        d. css box model mendefinisikan 'kotak' yang dihaislkan oleh sebuah element, lalu menampilkannya sesuai format visual nya
+        e. css box model terdiri dari
+            - margin        - padding
+            - border        - content
+        f. |---------------------------------------------------|
+           |                     MARGIN                        |
+           |  |---------------------------------------------|  |
+           |  |                  BORDER                     |  |
+           |  |  |---------------------------------------|  |  |
+           |  |  |               PADDING                 |  |  |
+           |  |  |  |---------------------------------|  |  |  |
+           |  |  |  |                                 |  |  |  |
+           |  |  |  |            CONTENT              |  |  |  |
+           |  |  |  |                                 |  |  |  |
+           |  |  |  |---------------------------------|  |  |  |
+           |  |  |                                       |  |  |
+           |  |  |---------------------------------------|  |  |
+           |  |                                             |  |
+           |  |---------------------------------------------|  |
+           |                                                   |
+           |---------------------------------------------------|
+        g. margin adalah area transparan di sekitar kotak / di luar border
+        h. border adalah batas disekeliling content dan padding
+        i. padding adalah area transparan di dalam kotak / antara content dan border
+        j. content sebenarnya didalam box, bisa berupa teks atau gambar
+        k. properti untuk margin, padding dan border
+            - margin-top        - padding-top       - border-top
+            - margin-right      - padding-right     - border-right
+            - margin-bottom     - padding-bottom    - border-bottom
+            - margin-left       - padding-left      - border-left
+            - margin            - padding           - border
+    B. MARGIN
+        a. cara pakai
+            - margin dapat digunakan dengan cara menambahkan properti pada style css untuk mengatur posisi margin pada element tertentu
+        b. overlapping margin
+            - terjadi ketika kita menggabungkan dua buah margin biasanya kiri dan kanan atau atas dan bawah
+            - untuk vertikal, terdapat dua kotak yang diatas dengan class satu, dan yang dibawah dengan class dua,
+              class satu memiliki margin-bottom 150px dan class dua memiliki margin-top 50px. bukannya menjadi 200px melainkan
+              tidak ada perubahan karena margin tdk saling menambahkan khusus yang vertikal. jadi margin yang akan diambil ialah margin terbesar
+            - untuk horizontal, buat semua default display pada target div menjadi inline-block agar sejajar dan dapat diubah ukurannya
+               /* terdapat keanehan inline-block dmn ketiga kotak div memiliki jarak tanpa diberi jarak bahkan ketika diberi jarak 0 sekalipun
+               maka cara agar menempel yaitu dengan menggabungkan semua tag benjadi berurutan tanpa ada karakter ENTER */
+               misal terdapat dua kotak class satu di sebelah kiri dan class dua disebelah kanan, class satu memiliki margin-right 20px dan
+               class dua memiliki margin-left 30px, maka hasilnya jarak horizontal kedua box menjadi 50px / penjumlahan dari kedua margin tersebut.
+        c. negatif margin
+            - misal terdapat dua kotak class satu diatas dan class dua dibawah. class satu memiliki margin-bottom 30px dan class dua memiliki
+              margin-top -50px. maka class dua akan keatas berlawanan dan menembus class satu.
+        d. auto
+            - adalah nilai yang dapat dikasih kedalam margin khusus untuk margin kiri dan margin kanan
+            - misal pada suatu kotak diberikan margin-left auto dan margin-right auto [ kiri_kanan_harus_auto ].
+              maka element akan berada di pertengahan dari parent nya
+        e. shorthand
+            - cara menyingkat penulisan margin
+            - /* margin: 50px; */ artinya keempat sisinya memiliki margin 50px
+            - /* margin: [top & bottom] [right & left] */ maka
+              /* margin: 50px auto; */ artinya sisi atas dan bawah 50px dan sisi kiri dan kanan memiliki margin auto
+            - /* margin: [top] [right & left] [bottom] */ maka
+              /* margin: 30px 50px 40px; */ artinya sisi atas 40px, sisi kanan kiri 50px, dan sisi bawah 40px
+            - /* margin: [top] [right] [bottom] [left] */ searah jarum jam, maka
+              /* margin: 10px 20px 30px 40px; */ artinya atas 10px, kanan 20px, bawah 30px, dan kiri 40px
+    C. PADDING
+        a. padding biasa digunakan untuk memberikan jarak antar sebuah kotak dengan tulisan di dalam nya
+        b. padding memiliki kesamaan cara penggunaan seperti margin
+        c. padding tidak memiliki nilai negatif
+        d. padding tidak memiliki nilai auto
+        e. padding mempengaruhi ukuran dari box yang dibuat
+    D. BORDER
+        a. value border
+            - border-width
+            - border-style
+            - border-color
+        b. shorthand/* border: [width] [style] [warna]; */
+        c. style pada border
+            - solid
+            - dotted
+            - dashed
+            - double
+        d. macam macam border
+            - border-top
+            - border-right
+            - border-bottom
+            - border-left
+        e. sama seperti padding, border juga menambahkan ukuran element
+        f. jadi total dimensi = width / height + padding + border
+        g. properti khusus agar kita tidak perlu mengkalkulasikan dimensi nya, yaitu /* box-sizing */
+           box-sizing membuat kita tidak perlu mengkalkulasi ulang total dari dimensi yang sudah kita buat.
+        h. ketika membuat sebuah element, yang diatur dimensi nya hanya lebar saja, tinggi biasanya sesuai dengan banyak content yang dikasih.
+           kalau tinggi nya dikasih ukuran, maka ketika content lebih besar dari tinggi, content akan keluar dari content nya
+        i. contoh ada pada website halaman 5 div border1 dan border2
+    E. CSS RESET
+        a. adalah teknik yang membuat kita dapat mengatur ulang nilai nilai default dari element yang ada pada html khususnya margin & padding
+        b. ketika kita membuat kotak menggunakan /* div { width: 2oopx; height: 200px; background-color: black; */ maka akan ada kotak hitam
+           tapi kotak tersebut punya jarak spasi pada atas dan kiri website, itu karena banyak element html yang secara default memiliki margin
+           dan padding tersendiri. contohnya disini adalah element body. maka kita buat /* body { margin: 0; } */ maka spasi hilang.
+           itu berarti kita melakukan [RESET] terhadap properti margin dari element html yang ada.
+        c. kenapa kita perlu melakukan reset? agar kita memiliki kendali penuh terhadap css yang akan kita buat.
+        d. cara yang dilakukan diatas masih belum praktis karena hanya dilakukan untuk element yang dimiliki saja. what if element bertambah?
+        e. cara praktis menggunakan RESET yaitu dengan menggunakan selector universal /* *{ margin: 0; padding: 0; } */ walau berat size nya
+        f. cara paling praktis yaitu menggunakan cari dari eric meyer pada website https://meyerweb.com/eric/tools/css/reset/
+        /*
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,fieldset,
+        form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer,
+        header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    	    margin: 0;
+	        padding: 0;
+	        border: 0;
+	        font-size: 100%;
+	        font: inherit;
+	        vertical-align: baseline; }
+        */ HTML5 display-role reset for older browsers /*
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+        body { line-height: 1; }
+        ol, ul { list-style: none; }
+        blockquote, q { quotes: none; }
+        blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+        table { border-collapse: collapse; border-spacing: 0; }*/
+    F. MEMBUAT WEBSITE SEDERHANA
+        a. ada pada tutorialweb.html
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+FLOAT
+    A. float merupakan properti pada css untuk mengatur posisi sebuah element. sebuah element dapat dipaksa untuk berada di sebelah kiri
+       atau kanan dari parent / pembungkusnya dengan menggunakan properti ini
+    B. value float
+        a. none   ,nilai default
+        b. left   ,element akan berada di kiri
+        c. right  ,element akan berada di kanan
+    C. perilaku-perilaku element saat diberi css
+        a. normal flow
+            seperti yang sebelumnya kita pelajari, misal display
+        b. out-of flow
+            seperti yang akan kita pelajari pada float
+    D. contoh, 3 kotak bersusun sejajar secara vertikal, ini adalah normal-flow walaupun disebelah kanan kelihatan masih kosong tapi karena display block
+       maka element selanjutnya akan berada dibawah. namun ketika salah satu kotak diberi properti float right maka kotak tersebut keluar dari flow normalnya
+       maka kotak akan dipaksa berada di sebelah kanan element pembungkusnya yaitu body.
+    E. yang bisa dilakukan menggunakan properti float
+        a. text wrapping       ,membuat teks mengelilingi gambar atau element lain
+        b. image gallery       ,membuat serangkaian gambar menjadi galeri
+        c. multi-column loyout ,membuat halaman memiliki beberapa kolom
+        d. dll
+    F. ketika diberi float maka dia akan keluar dari flow, sehingga container tidak menganggap di dalamnya ada kotak. atau istilahnya container nya collapse
+       atau runtuh.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CLEAR
+    A. kita akan membahas masalah pada saat text wrapping, image gallery, dan multi-column layout
+    B. cara menghentikan / membersihkan float
+        a. menggunakan property overflow
+        b. menggunakan <div> kosong
+        c. menggunakan teknik micro clearfix
+    B. text wrapping
+        a. ketika gambar lebih besar dari content text maka border container akan collapse / runtuh
+        b. menambah pada container /* overflow: auto */
+        c. artinya container akan menyeseuaikan tinggi dari koten nya
+        d. ini bukan solusi paling tepat tapi setidaknya ngakalin
+    C. penggunaan property clear berfungsi menghentikan dan membersihkan float
+       dengan cara menggunakan element html <div> kosong
+        a. left
+        b. right
+        c. both
+       masih belum bagus untuk dilakukan
+    D. micro clearfix
+        a. teknik ini tetap melakukan /* clear: both; */ tapi bedanya teknik ini memungkinkan kalian untuk tidak menambahkan element html kosong karena
+           menggunakan pseudo element
+        b. yaitu,  /*
+           .cf:before,
+           .cf:after {
+               content: " "; /* 1 */
+/*               display: table; /* 2 */
+/*          }  
+           
+           .cf:after {
+               clear: both;
+           }
+
+           .cf {
+               *zoom: 1;
+           }
+           */
+    E. MEMBUAT WEBSITE SEDERHANA
+        a. ada pada tutorialweb2.html
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+POSITION
+    A. position memungkinkan kita untuk menggeser sebuah element tanpa mempengaruhi element disekitarnya
+    B. value dari position
+        a. static     ,default position dari sebuah element yang tidak memiliki properti position
+        b. relative   ,membuat element seakan maju satu dimensi berpisah dari sekeliling nya.
+        c. absolute
+        d. fixed
+    C. menggunakan position selain static ( non-static ), akan membuat sebuah element menjadi seolah olah berbeda dimensi dari element lainnya
+    D. element yang diberi position selain static dapat menggunakan properti top, left, bottom, right untuk mengaturnya
+    E. relative
+        a. ketika kita menggerakkan element dengan posisi relative ( use property top left bottom right ), ruang yg ditempati oleh element masih ada
+        b. ketika kita menggerakkan element dengan posisi relative, element akan bergerak relatif terhadap posisi semula nya
+        c. ketika element sudah seakan maju satu dimensi dia punya akses ke properti top left bottom right
+        d. jika kita memberi properti /* top: 0; */ dan /* left: 0; */ maka element tidak berubah posisinya
+        e. menggeser element dengan posisi relative itu [ JARANG ], karena bisanya element diberi properti relative hanya karena kita ingin membuat element
+           maju satu dimensi saja atau keluar dari flow nya. yang biasanya menggerakkan element non-static adalah absolute
+    F. absolute
+        a. ketika kita menggerakkan element dengan posisi absolute ( use property top left bottom right  ), ruang yg ditempati oleh element dianggap tidak ada
+         . misal ada tiga susun kotak, lalu kotak kedua diberikan /* position: absolute; */ maka secara otomatis kotak keuda maju satu dimensi dan kotak
+           ketiga akan mengambil posisi kotak kedua didimensi sebelumnya ( seakan berada di belakang kotak kedua )
+        b. ketika kita menggerakkan element dengan posisi absolute, element akan bergerak relatif terhadap posisi dari element parent nya selama parentnya
+           memiliki posisi yang juga non-static
+         . agar kotak dapat mengikuti parent maka parent harus memiliki dimensi yang sama dengan element tersebut ( parent dalam bentuk container border 
+           baiknya diberi position relative )
+        c. jika kita memberi properti /* top: 0; */ dan /* left: 0; */ maka element akan berada di ujung kiri atas dari element parent nya
+    G. fixed
+        a. ketika kita menggerakkan element fixed menggunakan top left bottom right maka dia akan bergerak relative terhadap window browser. dia tidak akan
+           mempedulikan element parent nya meskipun parent nya non-static
+        b. ketika kita scroll halaman nya, element tersebut akan terkunci di posisi tersebut
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Z-INDEX
+    A. misal, terdapat tiga buah kotak yang memiliki /* position: absolute; */ maka ketiga kotak tersebut akan saling bertumpukan. z-index digunakan
+       untuk mengatur tumpukan dari element ketika dikasih element non-static.
+    B. ketika beberapa element mengandung property z-index maka semakin besar nilai angkanya, element nya akan berada semakin di depan.
+    C. penggunaan properti top left bottom right pada position element non-static
+        a. misal pada suatu web terdapat h1, h2, dan dua buah paragraf p.
+        b. kemudian diberi css untuk membuat suatu bar header diatas
+        /** .kotak {
+                height: 50px;
+                width: 100%;
+                background-color: black;
+                position: fixed;
+                top: 0;
+                left: 0;
+        } **/
+        c. bisa juga menggunakan ini dengan hasil yang sama
+        /** .kotak {
+                height: 50px;
+                background-color: black;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+        } **/
+        d. bisa juga menggunakan ini untuk menutup seluruh halaman
+        /** .kotak {
+                background-color: black;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+        } **/
+        e. bisa juga menggunakan ini untuk memperlihatkan element atau content dan tidak dapat diakses
+        /** .kotak {
+                background-color: black;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 0.7;
+        } **/
+        f. bisa juga menggunakan ini utnuk iklan penutup website atau informasi
+        /** .kotak {
+                background-color: black;
+                position: fixed;
+                top: 100px;
+                bottom: 100px;
+                left: 100px;
+                right: 100px;
+                opacity: 0.7;
+        } **/
+    D. membuat iklan website beserta tampilan tombol close

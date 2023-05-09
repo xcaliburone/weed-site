@@ -1,0 +1,160 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/*
+.card {
+    background: red;
+    width: 160px;
+    height: 120px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.card-img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 160px;
+    height: 100px;
+    background-color: aqua;
+    background: url(../JKT/img/IMG_1106.JPG);
+} */
+
+.framesatu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: relative;
+    width: 160px;
+    height: 220px;
+
+    background: #FFFFFF;
+    border-radius: 16px;
+}
+
+.frametiga {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 160px;
+    height: 100px;
+
+    background: #150707;
+
+    /* Inside auto layout */
+
+    /* flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0; */
+}
+
+.frametiga img {
+    width: 160px;
+    height: 100px;
+    object-fit: cover;
+    /* background: url(../JKT/img/IMG_1106.JPG); */
+/* Inside auto layout */
+    /* flex: none;
+    order: 0;
+    flex-grow: 1; */
+}
+
+.framedua {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 14px;
+    gap: 6px;
+
+    width: 160px;
+    height: 120px;
+/* Inside auto layout */
+
+    /* flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0; */
+}
+
+.frameempat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    width: 132px;
+    height: 12px;
+/* Inside auto layout */
+    /* flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0; */
+}
+
+.framelima {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 6px;
+
+    width: 132px;
+    height: 74px;
+/* Inside auto layout */
+    /* flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0; */
+}
+
+.framelima h1 {
+    width: 132px;
+    height: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+/* identical to box height */
+    color: #000000;
+/* Inside auto layout */
+    /* flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0; */
+}
+
+.framelima p {
+    width: 132px;
+    height: 48px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 12px;
+    text-align: justify;
+
+    color: #000000;
+
+
+/* Inside auto layout */
+
+    /* flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0; */
+}

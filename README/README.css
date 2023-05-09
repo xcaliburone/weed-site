@@ -1,0 +1,334 @@
+:
+** CSS adalah Cascading style sheet
+** CSS adalah mekanisme sederhana yang mengatur gaya pada halaman web
+** perbandingan penggunaan HTML dan jika digantikan ke CSS
+/*  <font size="+6" color="lightblue" face="arial">
+        <center>
+            <h1>Hello World</h1>
+        </center>
+    </font> */
+** sedangkan CSS dapat memisahkan konten dengan style
+    kontennya menggunakan HTML
+/*        <h1>Hello World</h1> */
+    sedangkan style berada di tempat yg berbeda / terpisah
+/*      h1 {
+            font-size: 120px;
+            font-family: arial;
+            color: lightblue;
+            text-align: center;
+        } */
+** html berfungsi untuk menyajikan konten
+** CSS berfungsi untuk menampilkan elemen/tag html
+** dibuat terpisah dengan html
+** bertujuan untuk memisahkan konten dan style
+** satu CSS dapat digunakan untuk banyak halaman html
+   A. misal saya mempunyai 3 buah halaman HTML yang memiliki struktur html berbeda,
+      lalu saya membuat sebuah file CSS ditempat lain, lalu dengan mekanisme tertentu yg nanti dipelajari,
+      kita hubungkan antara halaman 1,2,3 ke file CSS tersebut.
+   B. lalu didalam file CSS nya misal ditambahkan
+      body { font-family: arial; }
+      artinya, tolong ubah semua tulisan yang ada didalam tag body menjadi arial,
+      maka hasilnya semua yang berada didalam tag body pada diketiga halaman, font otomatis berubah ke arial
+** satu halaman html dapat terlihat berbeda jika menggunakan CSS yang berbeda pula
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ANATOMI CSS
+    A. syntax pada css terbagi menjadi 3
+       selector { property: value; }
+     + contoh
+       h1 { color: blue; }
+     + artinya
+       saya ingin membuat seluruh tulisan yang ada didalam h1 dihalaman saya warnanya berubah menjadi biru
+     + jika ingin sebuah selector memiliki lebih dari satu property maka,
+       h1 {
+        font-family: "Courier New";
+        text-align: center;
+        font-size: 30px;
+        color: blue;
+       }
+
+    B. selector
+     + digunakan untuk memilih dan memanipulasi elemen spesifik pada html
+     + elemen html dipilih berdasarkan tag, id, class, bahkan pola/pattern
+     + semakin kompleks struktur html, selector juga bisa semakin kompleks/spesifik
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+PENEMPATAN CSS
+    A. cara meempatkan CSS didalam dokumen html 
+       a. disimpan didalam halaman yang sama
+          + embed  ,disimpan didalam file yang sama, disimpan di bagian head, menggunakan tag <style></style>
+                    <head>
+                        <title>mencoba embed</title>
+                        <style>
+                            body { font-family: arial; }
+                            h1 { color: aqua; }
+                            p { 
+                                line-height: 1.6em;
+                                color: grey;
+                             }
+                        </style>
+                    </head>
+          + inline ,mencari elemen html mana yang mau diubah CSS nya, lalu tambahkan atribut style, lalu simpan syntax css nya
+                    <h1 style="color: green; font-family: arial;">CONTOH BRO</h1>
+       b. membuat file sendiri yang terpisah dengan file extension CSS
+          + dihubungkan dengam file html menggunakan tag <link rel="stylesheet" href="style.css">
+          + dengan menambahkan tag tersebut maka file html dan file css sudah terhubung
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+FONT STYLING
+    A. CSS memisahkan antara font dengan text, ada saatnya memberikan style pada font dan ada juga saatnya text
+    B. font terkait dengan tulisannya. sedangkan text terkait dengan properti pendukung
+    C. property CSS terkait dengan font
+        a. font-family  ,mengatur jenis font yang akan digunakan
+        b. font-size    ,mengatur ukuran font
+        c. font-weight  ,mengatur ketebalan
+        d. font-variant ,mengubah font menjadi small caps
+        e. font-style   ,mengubah font menjadi bercetak miring
+        f. line-height  ,mengatur spasi antar baris
+    D. penggunaan property
+        a. font-family 
+            + memiliki dua value, yaitu
+              nama font
+              generic family
+            + satu font-family dapat memiliki dua value
+              font-family: arial;
+              font-family: georgia, serif;
+              font-family: arial, verdana, sans-serif;
+        b. font-size
+            + memiliki tiga value, yaitu
+              px
+              %
+              em
+        c. font-weight
+            + memiliki lima value, yaitu
+              lighter
+              normal
+              100-900
+              bold
+              bolder
+        d. font-variant
+            + memiliki dua value, yaitu
+              normal
+              small-caps
+        e. font-style
+            + memiliki tiga value, yaitu
+              normal
+              italic  ,jika font yang telah ditentukan memiliki type italic
+              oblique ,jika font yang telah ditentukan tidak memiliki type italic, terjadi proses oblique ( hanya memiringkan font beberapa derajat )
+        f. line-height
+            + memiliki tiga value, yaitu
+              normal
+              px
+              em
+    E. CSS font shorthand / singkatan
+        + yang awalnya
+/*         body {
+            font-style: italic;
+            font-variant: normal;
+            font-weight: bold;
+            font-size: 16px;
+            font-height: 18px;
+            font-family: helvetica, arial, sans-serif;
+           } */
+        + menjadi,
+/*         body {
+            font: italic normal bold 16px/18px helvetica,arial, sans-serif; }   */  **dengan urutan;
+                  font   font   font  font font-heigt        font-family  
+                style  variant weight size
+                (     optional      )(wajib)(optional)       (wajib)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+TEXT STYLING
+    A. css membedakan antara font dan text.
+    B. pemberian komentar pada css menggunakan /* komentar */.
+    C. property css terkait dengan text
+        a. color            ,memberi warna pada tulisan.
+        b. text-align       ,mengatur format paragraf / teks.
+        c. text-indent      ,memberi indentasi pada paragraf / teks.
+        d. text-decoration  ,mengatur dekorasi pada teks.
+        e. text-transform   ,mengubah jenis huruf menjadi huruf besar semua, kecil semua, kapital.
+        f. letter-spacing   ,mengatur spasi antar huruf.
+        g. word-spacing     ,mengatur spasi antar kata.
+    D. penggunaan property
+        a. color
+            + menggunakan nama warna.  ex: red, lightseagreen, royalblue,...
+            + menggunakan hexadecimal. ex: #ff0000, #20b2aa, #4169e1,...
+            + menggunakan rgb.         ex: rgb(255,0,0), rgb(32,178,170), rgb(65,105,225),...
+        b. text-align
+            + left     ,rata kiri.
+            + right    ,rata kanan.
+            + center   ,rata tengah.
+            + justify  ,rata kiri kanan.
+        c. text-indent
+            + px
+            + %
+        d. text-decoration
+            + none         ,menghilangkan decoration.
+            + underline    ,menambahkan garis bawah.
+            + overline     ,menambahkan garis atas.
+            + line-through ,menambahkan garis tengah.
+        e. text-transform
+            + none
+            + lowercase  ,memaksa huruf kecil semua
+            + uppercase  ,memaksa huruf besar semua
+            + capitalize ,memaksa huruf kapital
+        f. letter-spacing
+            + normal
+            + px
+        g. word-spacing
+            + normal
+            + px
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+BACKGROUND PADA CSS
+    A. property background
+        a. background-color    ,mengatur warna pada background.
+        b. background-image    ,mengatur gambar yang akan digunakan pada background.
+        c. background-position ,mengatur posisi gambar pada background.
+        d. background-repeat   ,mengatur jenis pengulangan gambar pada background.
+    B. property dapat digunakan semua atau hanya satu saja.
+    C. praktek percobaan pemberian background pada body html.
+    D. value dari background-position
+        a. top left         d. center left          g. bottom left          j. x% y%
+        b. top center       e. center center        h. bottom center        k. x-pos y-pos
+        c. top right        f. center right         i. bottom right
+    E. value dari background-repeat
+        a. repeat
+        b. repeat-x
+        c. repeat-y
+        d. no-repeat
+    F. body
+        background-color: rgb(152, 226, 250)
+        background-image: url(img/bg6.jpg)
+        /* background-image: url(img/logo1.png); */
+        /* background-repeat: repeat-x; */
+        background-repeat: no-repeat
+        background-position: center
+        background-blend-mode: darken   
+    G. css shorthand / singkatan
+        a. background: color url() position repeat
+        b. background: lightgreen url(img/xcaliburone.png) top left no-repeat
+        c. urutan dari fotmat penulisan dapat ditukar
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CSS SELECTOR BASIC
+    A. selector adalah sesuatu yang digunakan oleh css untuk mengenali sebuah element html yang akan diberi style
+    B. selector dapat menggunakan :
+        a. element html
+        b. id
+        c. class
+        d. complex selector
+    C. id
+        a. sebuah elemen html hanya boleh memiliki 1 id
+        b. setiap halaman hanya boleh memiliki 1 elemen dengan id tersebut
+        c. dapat digunakan sebagai penanda halaman untuk link
+        d. digunakan juga untuk javascript
+        e. sebaiknya tidak digunakan untuk CSS, menggunakan id itu bebannya lebih berat.
+           misal, menggunakan element html itu bebannya 1, menggunakan class itu 10x lebih berat, menggunakan id itu 100x lebih berat.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+PSEUDO CLASS
+    A. pseudo class adalah kelas semu yang dimiliki oleh sebuah element html, yang membuat kita dapat mendefinisikan style pada "keadaan tertentu"
+       dari element tersebut.
+    B. disebut kelas semu karena class nya ada tetapi dia akan aktif hanya pada keadaan tertentu.
+    C. type pseudo-class yang berhubungan dengan link.
+        a. :link           ,style default pada sebuah link ( tag a yang memiliki href ).
+        b. :hover          ,style ketika cursor mouse berada diatas sebuah link / element.
+        c. :active         ,style ketika sebuah link di-klik / ditahan ( keadaan aktif ).
+        d. :visited        ,style ketika sebuah link sudah pernah dikunjungin sebelumnya ( using the same browser ).
+    D. type pseudo-class yang berhubungan dengan posisi element ( 1 ).
+        a. :first-child    ,memilih elemen pertama dari sebuah parent ( elemen pembungkusnya ).
+        b. :last-child     ,memilih elemen trakhir dari sebuah parent ( elemen pembungkusnya ).
+        c. :nth-child(n)   ,memilih elemen ke-n dari sebuah parent ( elemen pembungkusnya ).
+        + n bisa berupa urutan (1),(2),... atau pola (2n), (3n+2), (4n-1) atau ganjil dan genap (even) & (odd).
+        + ini hanya akan aktif ketika element nya merupakan child dari element lain.
+    E. type pseudo-class yang berhubungan dengan posisi element ( 2 ).
+        a. :first-of-type  ,memilih elemen pertama dari sebuah jenis / tipe tag.
+        b. :last-of-type   ,memilih elemen terakhir dari sebuah jenis / tipe tag.
+        c. :nth-of-type(n) ,memilih elemen ke-n dari sebuah jenis / tipe tag.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CSS INHERITANCE ( PEWARISAN )
+    A. sebuah element mewarisi beberapa nilai dari properti yang dimiliki oleh element parent-nya.
+    B. properti yang diwariskan:
+        a. color
+        b. font
+        c. letter-spacing
+        d. line-height
+        e. list-style
+        f. text-align
+        g. text-indent
+        h. text-transform
+        i. visibility
+        j. white-space
+    C. jika parent memiliki nilai dari properti tersebut maka children nya akan memiliki kencendrungan yang sama.
+    d. misal pada sebuah body html terdapat tag h1, a, dan tag p. kemudian diberikan css
+/*      body {
+            font-family: arial
+            color: darkgrey
+        }*/
+       maka, semua tulisan pada tag berubah menjadi arial. tapi tag a tidak ikut berubah menjadi darkgrey melainkan hanya default biru.
+       karena secara default, element a tidak mewarisi nilai dari properti color. agar dia mau mewarisi nilai dari properti tersebut.
+       maka kita dapat menambahkan sebuah properti:
+/*      a { color: inherit; }  */
+       yang artinya, saya akan mewarisi properti apapaun yang diberikan oleh parent saya.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+SPECIFICITY
+    A. setiap deklarasi css ( selector ) memiliki berat yang berbeda. Berat tersebut menentukan seberapa spesifik sebuah element dapat dipilih
+       oleh selector.
+    B. contoh:
+       misal terdapat satu tag html yaitu <p> kemudian pada satu tag tersebut diberikan css:
+ /*    p { color: red; }
+       p { color: green;} */
+       maka hasilnya teks akan berwarna hijau. karena p yang kedua akan menimpa properti yang pertama yaitu merah. karena jika kita membuat
+       selector yang sama yaitu p dan p selevel dan sama persis maka yang akan diambil adalah selector yang paling terakhir.
+    C. namun, jika diberikan css:
+/*     #p1 { color:red; }
+       p { color: green; } */
+       maka hasilnya teks akan berwarna merah. /* #p1 lebih spesifik dari p */
+    D. menghitung nilai specificity
+        a. misal kita mempunyai empat digit angka 0 yang kemudian diberi label.
+           inline  id  class element
+            0      0     0      0
+        b. jika pada selector yang dibuat ada element html maka +1 pada bagian element
+        c. jika pada selector yang dibuat ada class maka +1 pada bagian class
+        d. jika pada selector yang dibuat ada id maka +1 pada bagian id
+        e. jika pada selector yang dibuat ada inline maka +1 pada bagian inline
+        f. contoh:
+           #p1 = 0100
+           p   = 0001
+           jika diadu maka #p1 yang lebih berat maka dialah yang terpilih
+    E. contoh lain:
+       pada html terdapat
+/*     <ul id="sarapan">
+         <li class="favorit">Nasi Goreng</li>
+         <li>Mie Goreng</li>
+         <li>Bubur Ayam</li>
+         <li>Nasi Kuning</li> */
+       dengan css
+/*     ul#sarapan li { color: green; }
+       .favorit { color: red; } */
+       maka semua teks berwarna hijau, bahkan nasi goreng juga hijau tidak merah. coba kita hitung:
+       ul#sarapan li = 0102
+       .favorit      = 0010
+       maka yang terpilih adalah warna hijau.
+       kemudian bagaimana cara agar teks nasi goreng berubah menjadi warna merah? maka kita harus membuat element yang diinginkan agar menjadi
+       lebih spesifik.
+       dengan cara menambahkan beban pada element tersebut agar semakin berat.
+       maka mengubah /* .favorit */ menjadi /* ul#sarapan li.favorit */
+       bacanya, css tolong carikan sy <li> yang punya class favorit dan dia berada didalam <ul> yg memiliki id sarapan.
+       maka skornya menjadi : ul#sarapan li.favorit = 0112
+       maka hasilnya semua teks berwarna hijau, kecuali nasi goreng dia berwarna merah sendiri.
+    F. kalkulator specificity
+       http://specificity.keegan.st

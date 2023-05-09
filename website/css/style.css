@@ -1,0 +1,119 @@
+/* GROUPING MENGGUNAKAN OPERATOR "," jikalau ada yang ingin disamakan */
+h1, h2 {
+    font-family: arial, helvetica, sans-serif;
+    color: rgb(176, 176, 255);
+    text-align: center;
+    font-size: 35px;
+    font-style: italic;
+}
+
+/* untuk pimasahan model dengan yang diatas */
+h2 {
+    font-style: normal;
+}
+
+p {
+    color: white;
+    font-size: 17px;
+    font-family: monospace;
+    line-height: 2em;
+}
+
+i {
+    color: white;
+    font-weight: 600;
+}
+
+/* SELECTOR TIPE TAG / ELEMENT HTML */
+body {
+    background-color: rgb(64, 62, 66);
+    background-image: url(img/bg6.jpg);
+    /* background-image: url(img/logo1.png); */
+    /* background-repeat: repeat-x; */
+    background-repeat: no-repeat;
+    background-position: top;
+    background-blend-mode: darken;
+}
+
+/* css tolong pilihkan saya tag "a" yang ada didalam "li" yang ada didalam "ul" */
+ul li a { color: yellowgreen; }
+
+/* css tolong pilihkan saya tag "a" yang ada didalam "li" yang ada didalam "ol" */
+ol li a { color: red; }
+
+/* mengubah warna dari marked "ul" dan "ol" */
+ul li::marker {
+    color: yellowgreen;
+}
+ol li::marker {
+    color: red;
+}
+
+/* selector menggunakan id */
+#p1 {
+    color: yellowgreen;
+}
+
+/* selector menggunakan class */
+.p2 {
+    color: red;
+}
+
+/* selector  */
+.cetak-tebal {
+    font-weight: bold;
+    font-style: italic;
+}
+/* css tolong carikan saya tag "a" yang memiliki pola "cetak-tebal" */
+a.cetak-tebal {
+    color: white;
+}
+
+/* pseudo-class aktif berdasarkan link */
+.apaan:link {
+    color: red;
+}
+
+.apaan:hover {
+    color: yellow;
+    font-size: 30px;
+}
+
+.apaan:active {
+    font-style: italic;
+    color: greenyellow;
+}
+
+.apaan:visited {
+    color: rgb(45, 188, 255);
+}
+
+/* pseudo class aktif berdasarkan posisi element (1) */
+li:first-child a {    /* css tolong carikan "a" yang ada didalam "li" yang merupakan anak yang pertama */
+    color: green;
+}
+
+li:last-child a {
+    color: yellow;
+}
+
+li:nth-child(2) a {   /* parameter bisa urutannya langsung, berupa pola, ataupun ganjil genap */
+    color: orange;
+}
+
+/* pseudo class aktif berdasarkan posisi element (2) */
+p:first-of-type {
+    color: white;
+}
+
+p:last-of-type {
+    color: pink;
+}
+
+p:nth-of-type(6) {
+    color: goldenrod;
+}
+
+p:nth-of-type(8) {
+    color: pink;
+}

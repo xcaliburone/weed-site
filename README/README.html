@@ -1,0 +1,521 @@
+STEP
+
+1. BUAT NOTEPAD DENGAN FORMAT NAMA .HTML DAN TYPE ALL FILES
+2. LALU MASUKKAN
+
+<!-- <!doctype html>           | untuk memberitahu browser kalau kita pakai versi 5
+<html>                    | tag pembuka html
+<head>                    | tag pembuka head
+    <title></title>       | tag untuk memsang judul pada web
+</head>                   | tag penutup head
+
+<body>                    | isi
+    <p>selamat datang</p> | tanda paragraf dan akhir dari paragraf
+	<p> hai semuanya</p>  | tanda paragraf dan akhir dari paragraf
+</body>                   | penutup
+</html>                   | penutup html
+-->
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	hal yang bisa disimpan didalam <head>
+	- judul halaman <title></title>
+	- css           <style></style>
+	- javascript    <script></script>
+	- metadata      <meta></meta>       "penting untuk mendeskripsikan website"
+										<head>
+											<meta charset="UTF-8"> **ini merupakan encoding
+											<meta name="description" content="KELINCI PERCOBAAN PERTAMA">
+											<meta name="keywords" content="HTML,CSS,JavaScript">
+											<meta name="author" content="adhim rahman">
+										</head>
+										
+										
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	hal yang disimpan didalam <body>
+	- teks  
+			,<h1> heading terbesar
+			,<h2>
+			,<h3>
+			,<h4>
+			,<h5>
+			,<h6> heading terkecil
+			,<p></p> tag paragraph
+	
+	- pendukung teks
+			,<br> untuk menambahkan baris baru, dapat disisipkan dimana pun
+			,<hr> untuk menambahkan garis horizontal
+			,<em> untuk memberikan penekanan pada sebuah teks / emphasized | membuat font menjadi miring
+			,<strong> untuk memberi penekanan yang lebih kuat | membuat font jadi cetak tebal
+
+	- menyimpan gambar
+			,<img>
+			
+	- menyimpan hyperlink
+			,<a>
+			
+	- list ( bullets & numbering )
+			,<ul> unordered list / membuat list tidak berurut
+			,<ol> ordered list, membuat list terurut
+			,<li> list item, terdapat didalam <ul> dan <ol>
+			,<dl> description list, membuat daftar definisi
+			,<dt> terdapat didalam <dl>, term / termonilogy
+			,<dd> terdapat didalan <dl>, description 
+			
+	- tabel
+			,<table>
+			,<thead> / <th> terdapat didalam <table>
+			,<tbody> / <td> terdapat didalam <table>
+			
+	- form
+			,<form>
+			,<input>  terdapat didalam <form> | 3 input fields & 2 text fields
+			,<select> combo box
+			,<button> 
+			
+	- script
+			,<!-- <script> javascript -->
+	
+	- object
+			,<object>
+			
+	- grouping
+			,<div> 
+			,<span> memberi warna pada bagian text
+			
+	- komentar
+			<!-- ini adalah komentar. --> 
+			tidak akan tampil di dalam web
+			
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	<!-- STRUKTUR TAG -->
+	
+	<namatag atribut="nilai"> **diawali dengan nama tag
+							  **boleh ada atributnya
+	ex:						  **tiap atribut memiliki nilai / value
+	<body bgcolor="lightblue">   **pemberian warna tidak disarankan karena merupakan tugas dari CSS
+	
+	sebuah tag boleh memiliki lebih dari satu atribut
+	ex:
+	<body bgcolor="lightblue" id="myid" class="myclass">
+	
+	setiap tag memiliki atribut yang default / global
+						   contoh dari atribut global
+						   - accesskey **menandakan element ini bisa di akses menggunakan keyboard / shortcut
+						   - class
+						   - id
+						   - dir       **untuk menentukan arah tulisan / direction
+						   - lang      **untuk bahasa / language
+						   - style     **untuk menyisipkan in line css
+						   - tabindex  **untuk menentukan urutan pada saat kita pencet tab, focus cursor pindah kemana
+						   - title     **untuk memberi judul pada sebuah element
+						   
+						   
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	<!-- tag dekorasi -->
+	tag <b></b> membuat teks menjadi bold
+	tag <i></i> membuat teks menjadi italic
+	tag <u></u> menambahkan underline
+	**ada baiknya dekorasi merupakan tugas CSS
+	
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	<!-- list item -->
+	<!-- ordered list -->
+	<ol>
+		<li> item 1 </li>
+		<li> item 2 </li>
+		<li> item 3 </li>
+		....
+	</ol>			**dia akan otomatis berurut dan membentuk angka 1,2,3
+	
+	**mengunakan atribut type untuk mengubah logo pengurutnya
+	<ol type="...">
+	</ol>			**untuk type dapat di isi dalam bentuk apapun seperti 1,a,A,i,I
+	
+	
+	<!-- unordered list -->
+	<ul>
+		<li> item 1 </li>
+		<li> item 2 </li>
+		<li> item 3 </li>
+		....
+	</ul>			**urutan dari list item tidak berpengaruh / berbentuk logo serupa
+	
+	<ul type="...">
+	</ul>			**type yang tersedia yaitu disc, square dan circle
+	
+	
+	<!-- description list -->
+	<dl>
+		<dt> term 1 </dt>
+		<dd> description 1 </dd>
+		<dt> term 2 </dt>
+		<dd> description 2 </dd>
+	</dl>
+	
+	**ex
+	<dl>
+		<dt>HTML</dt>
+		<dd>Hypertext Markup Langueage</dd>
+		<dt>CSS</dt>
+		<dd>Cascading Style Sheet</dd>
+	</dl>
+	
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+<!-- hyperlink / link / weblink -->
+	koneksi dari sumber web ke web lain
+	menggunakan tag <a></a> yaitu anchor
+	kita juga membutuhkan atribut "href" kita dapat menambahkan link external / internal link / relative url / website lain yg ada didalam domain kita
+	
+	<p>...<a href="....">...</a>..............</p>
+	
+	<p>Klik <a href="..LINK..">disini</a> untuk mengetahui informasi lebih lanjut</p>
+	
+<!-- membuat internal link -->
+	membuat file .html terbaru didalam folder yang sama
+	jika kedua web memiliki domain yang sama, maka tidak perlu menambahkan http dan segala macam pada href
+	ex:
+	   <p>Klik <a href="halaman2.html">disini</a> untuk mengetahui informasi lebih lanjut.</p>
+	   
+<!-- relative url -->
+	cara pindah halaman yang memiliki folder atau tempat penyimpanan yang berbeda
+	karena file yang dituju terdapat pada folder diatas dari folder file ini maka berlaku
+	
+	<p> Klik <a href="../halaman1.html">disini</a> untuk ke halaman 1</p>
+	**itu jika halaman yang dituju "1" ada diluar folder sedangkan halaman asal berada di dalam folder
+	
+	**if halaman 1 berada di dalam folder A dan halaman 2 berada di dalam folder B
+	  jika halaman 1 adalah asal dan halaman 2 adalah destinasi, maka
+	  
+	<p> Klik <a href="../user/halaman2.html">disini</a> untuk ke halaman 2</p>
+	
+	
+<!-- page anchor -->
+	merupakan bagian tertentu dari sebuah halaman
+	bukan hanya masuk ke sebuah halaman melainkan pindah ke bagian tertentu dari sebuah halaman
+	<!-- ex: -->
+	1. buat 3 bagian teks, masing masing bagian memiliki beberapa paragraf
+	2. judul teks dapat dikasih heading, misal <h2></h2>
+	3. tiap paragraf didalam teks dapat dibalut <p></p>
+	4. tiap bagian dapat dipisah menggunakan 10 <br>
+	5. memberi id pada tiap heading per bagian <h2 id="bagian1"></h2>
+	6. membuat unordered list pada bagian atas laman, diatas bagian1 <ul></ul>
+	7. mengisi unordered list dengan <li><a href="">Ke bagian 1</a></li>
+	8. pemasangan id merupakan pemasangan anchor / penanda, tinggal di "panggil"
+	9. pada bagian href kita menambahkan ( # ) yaitu penanda untuk id
+	10. menjadi <li><a href="#bagian1">Ke bagian1</a></li>
+		itu artinya saya akan pindah ke halaman yang sama tapi mencari anchor/id bagian1
+	
+	<!-- cara berpindah ke halaman lain pada bagian tertentu -->
+	1. misal halaman 1 merupakan halaman asal dan halaman 3 merupakan tujuan
+	2. tambahkan di halaman 1
+	   <a href="halaman3.html#bagian3">Ke halaman 3, bagian 3</a>
+
+	<!-- cara agar ketika kita membuka sebuah link, maka kita akan ke tab baru / new window -->
+	1. untuk melakukan itu kita harus menambahkan suatu atribut yaitu <a target=""></a>
+	2. atribut ini memiliki value yaitu 
+		: _self		,untuk membuka link dihalaman yang sama
+		: _blank	,untuk membuka di tab baru
+		: _parent
+		: _top
+	3. jika tidak menuliskan target, maka yg dipanggil adalah _self
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+<!-- image html -->
+	cara menyimpan sebuah gambar kedalam dokumen HTML
+	<img src=""> tag yang akan digunakan
+	step:
+	1. mencopy sebuah gambar kedalam folder
+	2. menambahkan <img src=""> pada body <html></html>
+	3. file gambar yang dapat disimpan yaitu
+			A. internal resource ( logo.png / background.jpg )
+				+ pastikan file berada didalam folder yang sama
+				  <img src="logo.png">
+				+ jika file berada ditempat yang berbeda, maka relative url berlaku
+				  <img src="image/logo.png">
+				  <img src="../image/logo.png">
+			B. external resource ( hotlink )
+				+ ini tidak disarankan karena gambar yg diambil berasal dari website lain
+				+ karena pada saat user membuka website kita dan gambarnya tampil, itu yg digunakan adalah bandwidth dari pemilik website itu. thath cheating
+				+ dan beresiko terkena copyright dan juga kita akan bergantung kepada website tersebut
+	4. atribut atribut yang dimiliki oleh ( <img> )
+			A. src   , atau source yaitu gambarnya mau ngambil dari mana
+			B. alt   , berguna untuk memberikan alternatif teks pada gambar
+					 , jika ada yg salah pada gambar sehingga tidak bisa tampil, maka teks pada ( alt ) yg menggantikannya
+					 , if tidak tampil = mungkin kotak error kekecilan untuk teks maka kita harus perlebar ukuran dari kotaknya dengan menambahkan ( width ) dgn satuan pixels
+					   <img src="logo.png" alt="ini adalah logo" width="200">
+			C. title , digunakan untuk memberikan judul pada gambar
+					   <img src="logo.png" alt="ini adalah logo" width="200" title="logo perusahaan">
+			D. width , untuk mengatur lebar pada gambar
+			E. height, untuk mengatur tinggi pada gambar. bisa menulis keduanya atau salah satu saja
+					   + if salah satu, misal width 200 maka height akan menyesuaikan proporsi nya
+	5. untuk menuliskan width dan height dia memiliki 2 nilai
+			if angka saja = ukurannya px / pixels
+			if % = ukuran relatif terhadap halaman
+			     ex: 50% = setengah dari halaman, walaupun apk chrome di resize, tapi gambar akan berusaha 50% dari halamannya
+
+<!-- menggabungkan hyperlink + image -->
+sebelumnya kita buat hyperlink menggunakan text, sekarang kita coba menggunakan gambar
+ ex:
+    <a href="https://indopride.id/images/banner.png">
+		<img src="logo.png">
+	</a>
+ketika gambar di klik maka halaman akan diarahkan ke gambar ini, sekarang gambarnya berupa link
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+<!-- tabel pada HTML -->
+	1. digunakan untuk menampilkan data yang .... sama seperti membuat tabel di microsoft word, dll.
+	2. jangan menggunakan tabel sebagai layout halaman. terutama jika sudah mempelajari soal CSS
+	3. kotak kotak kesamping disebut BARIS
+	4. kotak kotak kebawah disebut KOLOM
+	5. perpotongan antara garis dan kolom disebut CELL / DATA
+	6. judul dari tiap kolom disebut HEADER
+				A. header horizontal
+				B. header vertikal
+	7. tag yang digunakan <table></table>
+	8. TABLE SIMPLE
+		<table>
+			<tr> 			  	 **table row, untuk membuat baris
+				<td></td>		 **table data
+			</tr>
+		</table>
+		ex:
+		<table>
+			<tr>
+				<td>baris 1, kolom 1</td>
+				<td>baris 1, kolom 2</td>
+			</tr>
+			<tr>
+				<td>baris 2, kolom 1</td>
+				<td>baris 2, kolom 2</td>
+			</tr>
+		</table>
+	9. TABLE COMPLEX
+		A. digunakan jika data sudah banyak dan strukturnya sudah kompleks
+		<table>
+			<thead>
+				<tr>
+					<th></th>					}
+					<th>Kolom 1</th>			} header
+					<th>Kolom 2</th>			}
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Baris 1</th>			} header
+					<td>Baris 1, kolom 1</td>
+					<td>Baris 1, Kolom 2</td>
+				</tr>
+				<tr>
+					<th>Baris 2</th>			} header
+					<td>Baris 2, Kolom 1</td>
+					<td>Baris 2, Kolom 2</td>
+				</tr>
+			</tbody>
+		</table>
+		B. menjadi table dengan dua sumbu header
+	10. atribut-atribut pada <table></table>
+		A. border		, digunakan untuk menambahkan garis disekitar cell		} gunakan CSS
+			<table border="ketebalannya"></table>
+		B. cellspacing	, untuk menambah jarak antar cell						} gunakan CSS
+			<table border="1" cellspacing="0"></table>
+		C. cellpadding	, untuk memberi luas pada sebuah cell					} gunakan CSS
+			<table border="1" cellspacing="0" cellpadding="5"></table>
+		D. colspan		, digunakan untuk melakukan merging / menggabungkan dua buah atau lebih cell yang horizontal / kolom pada tebal
+		   + misal kita mempunyai 3 baris, masing masing memiliki 3 kolom
+			 <table border="1" cellspacing="0" cellpadding="5">
+				<tr>
+					<td>1,1</td>
+					<td>1,2</td>
+					<td>1,3</td>
+				</tr>
+				<tr>
+					<td>2,1</td>
+					<td>2,2</td>
+					<td>2,3</td>
+				</tr>
+				<tr>
+					<td>3,1</td>
+					<td>3,2</td>
+					<td>3,3</td>
+				</tr>
+			 </table>
+		   + dan kita akan menggabungkan dua buah kolom di baris PERTAMA
+			 <td>1,1</td>
+			 <td>1,2</td>
+			 <td>1,3</td>
+		   + menjadi,
+			 <td>1,1</td>
+			 <td colspan="2">Colspan 2</td>
+		E. rowspan		, digunakan untuk melakukan merging / menggabungkan dua buah atau lebih cell yang vertikal / row / baris
+			+ menggabungkan baris sedikit lebih sulit daripada menggabungkan kolom
+			 <tr>
+				<td>1,1</td>
+				<td colspan="2">Colspan 2</td> **karena ingin menggabungkan kolom 1 dan 2
+			 </tr>
+			 <tr>
+				<td>2,1</td>
+				<td>2,2</td>
+				<td>2,3</td>
+			 </tr>
+			 <tr>
+				<td>3,1</td>
+				<td>3,2</td>
+				<td>3,3</td>
+			 </tr>
+			+ menjadi,
+			 <tr>
+				<td rowspan="3">Rowspan 3</td> **karena ingin menggabungkan baris 1,2 dan 3
+				<td colspan="2">Colspan 2</td>
+			 </tr>
+			 <tr>
+				<td>2,2</td>
+				<td>2,3</td>
+			 </tr>
+			 <tr>
+				<td>3,2</td>
+				<td>3,3</td>
+			 </tr>
+		F. Tugas menggabungkan colspan dan rowspan
+			+ membuat lubang kosong 2x2 pada tabel 4x4
+			<table border="1" cellspacing="0" cellpadding="9">
+				<tr>
+					<td>1,1</td>
+					<td>1,2</td>
+					<td>1,3</td>
+					<td>1,4</td>
+				</tr>
+				<tr>
+					<td>2,1</td>
+					<td>2,2</td>
+					<td>2,3</td>
+					<td>2,4</td>
+				</tr>
+				<tr>
+					<td>3,1</td>
+					<td>3,2</td>
+					<td>3,3</td>
+					<td>3,4</td>
+				</tr>
+				<tr>
+					<td>4,1</td>
+					<td>4,2</td>
+					<td>4,3</td>
+					<td>4,4</td>
+				</tr>
+			</table>
+			+ kemudian dibuat menjadi
+			<table border="1" cellspacing="0" cellpadding="9">
+				<tr>
+					<td>1,1</td>
+					<td>1,2</td>
+					<td>1,3</td>
+					<td>1,4</td>
+				</tr>
+				<tr>
+					<td>2,1</td>
+					<td colspan="2" rowspan="2">?</td>
+					<td>2,4</td>
+				</tr>
+				<tr>
+					<td>3,1</td>
+					<td>3,4</td>
+				</tr>
+				<tr>
+					<td>4,1</td>
+					<td>4,2</td>
+					<td>4,3</td>
+					<td>4,4</td>
+				</tr>
+			</table>
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	<!-- form pada HTML -->
+		1. Form adalah sebuah elemen pada HTML yang digunakan untuk mengelola data dari input yang dilakukan oleh user.
+		2. baik itu saat user mengisikan data pada kolom, memilih sesuatu pada combo box, dropdown menu, check box, memilih radio button bahkan sampai user nanti menekan sebuah tombol
+		3. ada login form, registration form, dll.
+		4. tag yang digunakan yaitu <form></form>
+		5. elemen-elemen didalam form
+		   A. input , dimana user dapat menginput sesuatu. hanya kolom saja
+			  a. tag yang digunakan <input type="">
+			  b. atribut-atribut yang digunakan
+				 + text     , untuk text field
+				 + password
+				 + radio    , radiobutton
+				 + checkbox
+				 + submit   , jika ingin mengirim data                   }
+				 + reset    , jika ingin menghapus data                  } karena tombol tidak seharusnya digunakan di input
+				 + button   , untuk memberi fungsi spesifik pada button  }
+				 <html>
+					<head></head>
+					<body>
+						<form>
+							<!-- penggunaan input text -->
+							<label for="username">username : </label>	<!-- id harus sama dengan for-->
+							<input type="text" id="username">			<!-- sistem mengetahui bahwa label yg kita buat adalah milik input yang ada dibawahya -->
+							<br>
+							<!-- penggunaan input password -->
+							<label for="password">password : </label>
+							<input type="password" id="password">
+							<br>
+							<!-- penggunaan input radio -->
+							<input type="radio" id="pria" name="jeniskelamin"><label for="pria">Pria</label>		<!-- agar dapat mamilih salah satu maka -->
+							<input type="radio" id="wanita" name="jeniskelamin"><label for="wanita">Wanita</label>	<!-- tambahkan atribut "name" untuk menandakan bahwa dua buah button tersebut satu grup -->
+							<br>
+							<!-- penggunaan input checkbox -->
+							<input type="checkbox" id="menyanyi"><label for="menyanyi">menyanyi</label>
+							<input type="checkbox" id="berenang"><label for="berenang">berenang</label>
+							<input type="checkbox" id="bulutangkis"><label for="bulutangkis">bulutangkis</label>
+							<input type="checkbox" id="futsal"><label for="futsal">futsal</label>
+							<br>
+							<!-- pengunaan input submit -->
+							<input type="submit">		**untuk mengubah tulisannya
+							<input type="submit" value="Kirim">
+							<!-- button seharusnya tidak ada pada tag input -->
+							<!-- maka gunakan tag button itu sendiri -->
+							<button type="submit">Kirim</button>
+						</form>
+					</body>
+				 </html>
+		   B. textarea, mirip seperti textfield tapi lebih banyak yg bisa dia cakup
+			  <textarea></textarea>
+			  <textarea name="" id="" cols="30" rows="10"></textarea>
+		   C. select , digunakan untuk membuat dropdown, combobox
+			  <select>
+				<option>SMAN 1 MAKASSAR</option>
+				<option>SMAN 2 MAKASSAR</option>
+				<option>SMAN 3 MAKASSAR</option>
+				<option>SMAN 22 GOWA</option>
+			  </select>
+		   D. button , berupa tombol
+		   E. label , untuk menandai sebuah elemen input
+		   	+. Hasilnya tidak akan rapi / berantakan karena kita belum menggabungkan CSS
+		   	+. kita dapat mengakali menggunakan table
+		   F. tugas menggabungkan form dan table
+
+
+<p>The pre tag preserves both spaces and line breaks:</p>
+
+<pre>
+My Bonnie lies over the ocean.
+		   
+My Bonnie lies over the sea.
+		   
+My Bonnie lies over the ocean.
+			  
+Oh, bring back my Bonnie to me.
+</pre>

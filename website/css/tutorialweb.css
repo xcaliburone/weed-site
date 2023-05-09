@@ -1,0 +1,109 @@
+body { 
+    line-height: 1; 
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: ''; content: none;
+}
+
+table {
+    border-collapse: collapse; border-spacing: 0;
+}
+
+/* STYLE */
+body {
+    font: 16px/28px arial, sans-serif;
+    /* font: [ukuran-font-standar]/[jarak-antar-baris] [huruf] */
+    background-color: #eaeaea;
+    color: #333;
+    background-image: url(img/bg4.jpg);
+    /* filter: blur(5px) ; */
+
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    background-color: #fff;
+}
+
+.header {
+    padding: 20px;
+    padding-bottom: 5px;
+}
+
+.header .judul {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.header ul li {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.header a {
+    box-shadow: inset 0 0 0 0 lightskyblue;
+    text-decoration: none;
+    color: salmon;
+    padding: 3px;
+    transition: color .7s ease-in-out, box-shadow .7s ease-in-out;
+}
+
+.header a:hover {
+    color: white;
+    box-shadow: inset 100px 0 0 0 lightskyblue;
+}
+
+.hero {
+    height: 280px;
+    background-image: url(img/bg2.jpg);
+    background-size: cover;
+    background-position: 0 -80px;
+    border-bottom: 5px solid lightskyblue;
+    border-top: 5px solid salmon;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.content .penulis {
+    font-size: 15px;
+    margin-top: -10px;
+}
+
+.content .penulis a {
+    color: salmon;
+    text-decoration: none;
+}
+
+.content p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.footer {
+    background-color: #333;
+    padding: 5px;
+}
+
+.footer .copy {
+    color: #eaeaea;
+    text-align: center;
+    font-size: 15px;
+}
