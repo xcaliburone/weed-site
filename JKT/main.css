@@ -237,22 +237,6 @@
     grid-row-gap: 12px;
 }
 
-/* @media screen and (min-width: 200px) and (max-width: 900px) {
-    .container .main-content .card .card-box {
-        grid-template-columns: repeat(auto-fit, minmax(1rem, 0.1fr));
-        grid-template-rows: repeat(1, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 1px;
-        width: 80px;
-        height: 220px;
-    }
-
-    .card-box a button {
-        width: 160px;
-        height: 220px;
-    }
-} */
-
 .card-box, .card-box button {
     background-color: #eaeaea;
     width: 320px;
