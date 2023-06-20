@@ -1,0 +1,234 @@
+body {
+    background: url(../img/bg6.jpg);
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+.kotak-satu {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: blueviolet;
+    border-radius: 16px 50% 16px 50%;
+    opacity: .8;
+}
+
+.kotak-dua {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: yellow;
+    border-radius: 16px;
+    top: 70px;
+    left: 200px;
+}
+
+.kotak-tiga {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: blueviolet;
+    border-radius: 16px 50% 16px 50%;
+    opacity: .8;
+}
+
+.kotak-empat {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: yellow;
+    border-radius: 16px;
+    top: 70px;
+    left: 200px;
+}
+
+.bg-linear {
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    /* background-color: salmon; */
+    background-image: linear-gradient(90deg, green 40%, red, blue 70%);
+}
+
+.bg-radial {
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    background-image: radial-gradient(circle closest-corner at top center, red 10%, green 20%, blue 80%);
+}
+
+.container {
+    text-align: center;
+    width: 900px;
+    margin: 10px auto;
+    border: 5px solid black;
+}
+
+.transisi-satu {
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+    transition: all 1s;
+}
+
+.transisi-dua {
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+    transition: margin-left 1s;
+}
+.transisi-tiga {
+    border: px solid blue;
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+    transition: all 3s ease;
+}
+.transisi-empat {
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+    transition: all 3s ease-in;
+}
+.transisi-lima {
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+    transition: all 3s ease-out;
+}
+.transisi-enam {
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+    transition: 3s ease-in-out;
+}
+.transisi-tujuh {
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+    transition: 3s linear;
+}
+.transisi-delapan {
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+    transition: 3s cubic-bezier(0.24, -0.35, 0.78, 1.46);
+}
+
+.transisi-sembilan {
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+    transition: 3s 2s cubic-bezier(0.24, -0.35, 0.78, 1.46);
+}
+
+.transisi-sepuluh {
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+    transition: margin-left 3s, transform 3s 2s, background-color 2s 3s;
+}
+
+.container:hover .transisi-satu {
+    transform: rotate(180deg);
+    margin-left: 800px;
+    background-color: blue;
+}
+
+.container:hover .transisi-dua {
+    transform: rotate(180deg);
+    margin-left: 800px;
+    background-color: blue;
+}
+.container:hover .transisi-tiga {
+    transform: rotate(180deg);
+    margin-left: 800px;
+    background-color: blue;
+}
+.container:hover .transisi-empat {
+    transform: rotate(180deg);
+    margin-left: 800px;
+    background-color: blue;
+}
+.container:hover .transisi-lima {
+    transform: rotate(180deg);
+    margin-left: 800px;
+    background-color: blue;
+}
+.container:hover .transisi-enam {
+    transform: rotate(180deg);
+    margin-left: 800px;
+    background-color: blue;
+}
+.container:hover .transisi-tujuh {
+    transform: rotate(180deg);
+    margin-left: 800px;
+    background-color: blue;
+}
+.container:hover .transisi-delapan {
+    transform: rotate(180deg);
+    margin-left: 800px;
+    background-color: blue;
+}
+.container:hover .transisi-sembilan {
+    transform: rotate(180deg);
+    margin-left: 800px;
+    background-color: blue;
+}
+.container:hover .transisi-sepuluh {
+    transform: rotate(180deg);
+    margin-left: 800px;
+    background-color: blue;
+}
+
+.animasi-satu {
+    width: 200px;
+    height: 200px;
+    background-color: salmon;
+    text-align: center;
+    /* transition: 2s ease all; */
+    margin: 50px auto;
+}
+.animasi-dua {
+    width: 200px;
+    height: 200px;
+    background-color: salmon;
+    margin: 50px auto;
+    text-align: center;
+    /* transition: 2s ease all; */
+}
+
+.animasi-satu:hover {
+    /* width: 500px; */
+    animation: animasiSatu 2s ease;
+}
+.animasi-dua:hover {
+    /* width: 500px; */
+    animation: animasiDua 2s ease;
+    /* animation-name: animasiDua; */
+    /* animation-duration: 2s; */
+    /* animation-timing-function: ease; */
+}
+
+@keyframes animasiSatu {
+    from {
+        width: 200px;
+    }
+    to {
+        width: 500px;
+    }
+}
+
+@keyframes animasiDua {
+    0% {
+        width: 200px;
+    }
+    50% {
+        width: 500px;
+        height: 200px;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+    }
+}
