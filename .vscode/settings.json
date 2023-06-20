@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "algo_pencarian.C": "cpp",
+        "stdio.h": "c"
+    }
+}
