@@ -251,7 +251,7 @@
 
 .card-box:nth-of-type(1) button {
     background-color: #FF9900;
-    background-image: url(../JKT/img/cosmostales.JPG);
+    background-image: url(/BIG-ASSETS/coder/cosmostales.JPG);
     background-position: center;
     background-size: cover;
     cursor: pointer;
@@ -264,7 +264,7 @@
 
 .card-box:nth-of-type(2) button {
     background-color: #FF9900;
-    background-image: url(../JKT/img/maxresdefault.jpg);
+    background-image: url(/BIG-ASSETS/project-jkt/maxresdefault.jpg);
     background-position: center;
     background-size: cover;
     margin: 0;
@@ -277,14 +277,14 @@
 
 .card-box:nth-of-type(3){
     background-color: #FF9900;
-    background-image: url(../JKT/img/maxresdefaultt.jpg);
+    background-image: url(/BIG-ASSETS/project-jkt/maxresdefaultt.jpg);
     background-position: center;
     background-size: cover;
 }
 
 .card-box:nth-of-type(4){
     background-color: #FF9900;
-    background-image: url(../JKT/img/maxresdefaulttt.jpg);
+    background-image: url(/BIG-ASSETS/project-jkt/maxresdefaulttt.jpg);
     background-position: center;
     background-size: cover;
 }
