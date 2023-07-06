@@ -1,0 +1,31 @@
+.slider h3, .slider h5, .clients h3 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+}
+
+.slider .slides li img {
+    /* background-size: cover; */
+    /* min-width: 100px; */
+    /* margin-top: 10px; */
+    height: 600px;
+}
+
+.parallax-container {
+    height: 20%;
+}
+
+.parallax img {
+    height: 400px;
+    /* margin-left: -100px; */
+    filter: grayscale(1);
+    opacity: 0.5 !important;
+    background-size: cover;
+}
+
+.clients img {
+    max-width: 200px;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,1));
+}
+
+section, footer {
+    padding: 20px 0;
+}
