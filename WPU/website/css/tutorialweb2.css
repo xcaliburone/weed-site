@@ -24,7 +24,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 }  
            
 .cf:after { clear: both; }
-.cf { *zoom: 1; }
+.cf { zoom: 1; }
 
 /* STYLE */
 body {
@@ -32,7 +32,7 @@ body {
     /* font: [ukuran-font-standar]/[jarak-antar-baris] [huruf] */
     background-color: #eaeaea;
     color: #333;
-    background-image: url(bg4.jpg);
+    background-image: url(/BIG-ASSETS/wpu-website/bg4.jpg);
 }
 
 .container {
@@ -75,7 +75,7 @@ body {
 
 .hero {
     height: 360px;
-    background-image: url(bg2.jpg);
+    background-image: url(/BIG-ASSETS/wpu-website/bg2.jpg);
     background-size: cover;
     background-position: 0 -100px;
     border-bottom: 5px solid lightskyblue;

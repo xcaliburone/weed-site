@@ -24,7 +24,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 }  
            
 .cf:after { clear: both; }
-.cf { *zoom: 1; }
+/* .cf { *zoom: 1; } */
 
 /* BOX MODEL : MARGIN*/
 div.satu {
