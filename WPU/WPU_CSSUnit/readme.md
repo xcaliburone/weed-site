@@ -51,11 +51,63 @@
         ukurannya pada css. Jika sudah terus naik mencari element parent" nya dari pada parent tapi masih belum menemukan ukuran maka pada saat sudah
         sampai pada tag <html> maka tag html memiliki ukuran default yaitu [16px]. Maka ukuran 2em sama dengan 2x16px = 32px. Ketika em menumpuk pada
         parent"nya maka dia akan cascading / menumpuk. Bagaimana cara mengatasinya? maka kita gunakan REM
-    3.2. lebih konsisten karena hanya berpatokan pada size tag <html> dan <:root>. disarankan untuk menggunakan pada font-size saja.
+    3.2. rem lebih konsisten karena hanya berpatokan pada size tag <html> dan <:root>. disarankan untuk menggunakan pada font-size saja.
 
-    3.3. em disarankan juga digunakan pada tag bertipe [lenght] seperti padding, margin dan width. tdk seperti pada font yang langsung melihat elemen parentnya,
+    3.3. rem disarankan juga digunakan pada tag bertipe [lenght] seperti padding, margin dan width. tdk seperti pada font yang langsung melihat elemen parentnya,
         pada lenght dia akan lebih dulu berpatokan / relatif terhadap element nya sendiri. Jika tidak terdapat nilai font-size baru mencari ke element parent nya.
         ini akan membuat kita bisa membuat element yg lain dengan ukuran beda yg relatif terhadap ukuran font nya.
 
 4. VIEWPORT UNIT
-    4.1.
+    4.0. viewport itu area yang kita lihat menggunakan device apapun
+    4.1. vh (viewport height) : relatif terhadap tinggi dari viewport
+    4.2. vw (viewport width)  : relatif terhadap lebar dari viewport
+    4.3. vmin                 : relatif terhadap dimensi terkecil dari viewport
+        - pada desktop <vmin> nya itu [tinggi] dari desktop
+        - pada handphone <vmin> nya itu [lebar] dari handphone
+    4.4. vmax                 : relatif terhadap dimensi terbesar dari viewport
+        - pada desktop <vmax> nya itu [lebar] dari desktop
+        - pada handphone <vmax> nya itu [tinggi] dari handphone
+
+5. CSS calc()
+    5.1. fungsi pada css, yang memungkinkan kita untuk melakukan operasi matematika / kalkulasi pada nilai dari sebuah properti
+    5.2. nilai yang bisa dikelola yaitu :
+            - <length>      ,
+            - <angle>       ,
+            - <time>        ,
+            - <percentage>  ,
+            - <number>      ,
+    5.3. pendeklarasian <property: calc(expression); >
+            - penjumlahan <width: calc(10px + 100px); >
+            - pengurangan <width: calc(100% - 30px);>
+            - perkalian   <margin: calc(10px * 3);>
+            - perkalian   <margin: calc(3 * 10px);>
+            <!-- - perkalian   <margin: calc(3px * 10px)> ini yang salah-->
+            - pembagian   <margin: calc(30px / 3);>
+            - pembagian   <margin: calc(30px / 10px);>
+            <!-- - pembagian   <margin: calc(30px / 0);> ini yang salah -->
+            - pada pendeklarasian, wajib menggunakan spasi antar operator
+    5.4. contoh biasa:
+        .elemen {
+            font-size: calc(3vw + 2px);
+            width: calc(100% - 20px);
+            height: calc(100vh - 20px);
+            padding: calc(1vw + 5px);
+        }
+    5.5. contoh nested :
+        .elemen {
+            width: calc(calc(100% / 3) - calc(1rem * 2));
+        }
+        .elemen {
+            width: calc((100% / 3) - (1rem * 2));
+        }
+    5.6. contoh order of operation :
+        .elemen {
+            width: calc(100% / 3 - 1rem * 2);
+        }
+    5.7. contoh css variables / custom properties :
+        :root {
+            --header-height: 32px;
+        }
+        .elemen  {
+            height: calc(100vh - var(--header-height));
+        }
