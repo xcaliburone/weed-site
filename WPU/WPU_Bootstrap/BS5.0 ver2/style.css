@@ -1,9 +1,5 @@
-/* body {
-    min-height: 23000px;
-} */
-
 .jumbotron {
-    padding-top: 6rem;
+    padding-top: 8rem;
     background-color: #e2edff;
 }
 
@@ -11,14 +7,115 @@
     width: 200px;
     height: 200px;
     object-fit: cover;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 10px;
 }
 
-.projects {
-    background-color: #e2edff;
+.jumbotron p { margin-bottom: 200px; }
+
+.gallery a img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    /* margin: 5px; */
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
-section {
-    padding-top: 5rem;
+.gallery .galeri-foto { width: 100%; }
+
+.gallery .row > * { padding: 0; }
+
+.about p { margin-bottom: 150px; text-align: justify; }
+
+.projects { background-color: #e2edff; }
+
+.projects .img-pro {
+    height: 260px;
+    object-fit: cover;
 }
+
+section { padding-top: 5rem; }
+
+.card-box {
+    position: relative;
+    background-color: #0C6EFD;
+    border-radius: 10px;
+    height: 500px;
+    /* overflow: hidden; */
+    transform-style: preserve-3d;
+}
+
+.card-box::before {
+    content: 'MY';
+    position: absolute;
+    color: #fff;
+    font-size: 6em;
+    font-weight: bold;
+    font-style: italic;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card-box:hover::before { opacity: .5; cursor: pointer; }
+
+.card-box::after {
+    content: 'PROJECT';
+    position: absolute;
+    color: #fff;
+    font-size: 4.3em;
+    font-weight: bold;
+    font-style: italic;
+    top: 320px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card-box:hover::after { opacity: .5; }
+
+.card-name {
+    width: 100%;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    opacity: 0;
+    transition: .5s;
+    top: 0;
+    transform: translate3d(0, 0, 50px);
+}
+
+.card-box:hover .card-name { top: 20px; opacity: 1; }
+
+.card-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 50px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.card-box:hover .card-button { opacity: 1; bottom: 20px; }
+
+.card-image {
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 100px);
+    max-width: 500px;
+    transition: .5s;
+    z-index: 10;
+    /* background-color: black; */
+}
+
+.card-box:hover .card-image { transform: translate3d(-50%, -50%, 100px) scale(1.2) rotate(5deg); }
+
+.contact { min-height: 750px; }
