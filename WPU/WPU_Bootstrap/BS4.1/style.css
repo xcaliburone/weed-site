@@ -15,8 +15,10 @@
 .jumbotron {
     height: 500px;
     text-align: center;
-    background-image: url(/BIG-ASSETS/JKT48/hero01_2.jpg);
+    /* background-image: url(/BIG-ASSETS/JKT48/hero01_2.jpg); */
+    background-image: url(/BIG-ASSETS/CodeLicious/goooo.png);
     background-size: cover;
+    background-position: 0 -70px;
     position: relative;
 }
 
