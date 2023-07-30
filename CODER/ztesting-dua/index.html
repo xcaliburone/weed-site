@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- style -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./resp.css">
+    <!-- icon -->
+    <link rel="shortcut icon" href="./img/recoil.png" type="image/x-icon">
+    <!-- title website -->
+    <title>Coder - Form</title>
+</head>
+<body>
+
+    <section class="container">
+        <!-- container kiri -->
+        <section class="container-kiri">
+            <div class="image">
+                <div class="balok"></div>
+                <img src="./img/skambo.png" alt="">
+            </div>
+            <h2>Seja bem vindo!</h2>
+            <h3>Acesse sua conta agora mesmo.</h3>
+            <button href="" class="btn kiri">Entrar</button>
+            <p>Esqueci minha senha</p>
+        </section>
+        <!-- /container kiri -->
+
+        <!-- container-kanan -->
+        <section class="container-kanan">
+            <div class="header">
+                <h2>Crie sua conta</h2>
+                <p>Preecha o formulário</p>
+            </div>
+            <form class="input" id="input">
+                <div class="username">
+                    <img src="./img/username.svg" alt="username">
+                    <input type="name" placeholder="Nome" id="username" required>
+                </div>
+                <div class="email">
+                    <img src="./img/email.svg" alt="email">
+                    <input type="email" placeholder="Email" id="email" required>
+                </div>
+                <div class="pass">
+                    <img src="./img/password.svg" alt="pass">
+                    <input type="password" placeholder="Senha" id="pass" minlength="8" maxlength="12" required>
+                </div>
+                <button class="btn kanan">Cadastrar</button>
+            </form>
+        </section>
+        <!-- /container-kanan -->
+    </section>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Sign-Up</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="left">
+        <section class="description">
+          <img src="/tugas-ci22-form/img/skambo.png" alt="LOGO" />
+          <h1>Seja bem vindo!</h1>
+          <p>Acesse sua conta agora mesmo</p>
+        </section>
+        <section class="btn submitleft">
+          <button>ENTRAR</button>
+          <p>Esqueci minha senha</p>
+        </section>
+      </section>
+      <section class="right">
+        <header class="title">
+          <h1>Crie sua conta</h1>
+          <p>Preencha a formulario</p>
+        </header>
+        <main class="input-right">
+          <div class="input-container">
+            <span class="input-icon icon-name"></span>
+            <input type="text" placeholder="Name" id="name" />
+          </div>
+          <div class="input-container">
+            <span class="input-icon icon-email"></span>
+            <input type="email" placeholder="Email" id="email" />
+          </div>
+          <div class="input-container">
+            <span class="input-icon icon-senha"></span>
+            <input type="password" placeholder="Senha" id="senha" />
+          </div>
+          <span id="status"></span>
+        </main>
+        <button class="btn submitright">CADASTRAR</button>
+      </section>
+    </main>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/tugas-ci22-formulir/script.js"></script>
+  </body>
+</html>
