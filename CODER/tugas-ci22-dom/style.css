@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;800&display=swap');
+
+:root  {
+    --font-size-med: 16px;
+    --font-size-high: 23px;
+    --font-size-low: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--font-size-med);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E2CE1A;
+    height: 100vh;
+}
+
+.Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mini {
+    font-size: var(--font-size-low);
+}
+
+.tengah{
+    text-align: center;
+}
+
+/* Bagian Kiri */
+.Left-Container{
+    color: white;
+    background-color: #36320A;
+    border-radius: 16px 0px 0px 16px;
+    width: 250px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-top: 100px;
+    height : 450px;
+}
+
+.Left-Title {
+    font-size: var(--font-size-high);
+    font-weight: 700;
+}
+
+img {
+    padding-left: 20px;
+}
+
+.Left-Article {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 15px; */
+}
+
+.Left-Button {
+    margin-top: 60px;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 3px solid #FFF;
+    color:white;
+    font-size: calc(var(--font-size-med) + 4px);
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+
+/* Bagian kanan */
+.Right-Container {
+    border-radius: 0px 16px 16px 0px;
+    width: 500px;
+    height: 450px;
+    background-color: #FEFAA1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.Right-Title {
+    font-size: var(--font-size-high);
+    font-weight: 700;
+}
+
+.Right-Article {
+    margin-bottom: 10px;
+}
+
+.forms {
+    padding-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.forminput {
+    border-radius: 16px;
+    background: #E2CE1A;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    width: 400px;
+    height: 50px;
+    padding-left: 40px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.60);
+    font-family: Poppins;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.forminput::placeholder {
+    text-align: left;
+}
+
+.submit{
+    margin-top: 10px;
+    border-radius: 30px;
+    border: none;
+    color:white;
+    font-size: calc(var(--font-size-med) + 4px);
+    font-weight: 700;
+    width: 200px;
+    margin-bottom: 10px;
+    height: 50px;
+    border-radius: 30px;
+    background: #36320A;
+}
+
+.empty {
+    color: red;
+    font-size: var(--font-size-low);
+    position: absolute;
+}
+
+i {
+    color : rgba(0, 0, 0, 0.60);
+    font-size: 18px;
+    position: absolute;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container i {
+    position: absolute;
+    left: 15px;
+    pointer-events: none;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/be0bbe60fb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Form Coder</title>
+</head>
+<body>
+    <main class="Container">
+        <section class="Left-Container">
+            <img class="skambo" alt="Skambo" src=skambo3.png />
+            <article class="Left-Article">
+                <header class="Left-Title">Seja Bim Vindo!</header>
+                <div>Accesse sua conta agora mesmo</div>  
+                <button id="btn_enter" class="Left-Button">ENTRAR</button>
+                <div class="mini tengah">Esqueci Minha Senma</div>
+            </article>
+            
+        </section>
+        <section class="Right-Container">    
+            <article class="Right-Article">
+                <header class="Right-Title">Crie sua conta</header>
+                <p class="mini">Preencha a formulario</p>
+            </article>
+            <form class="forms">
+                <article> 
+                    <div class="input-container">
+                        <i class="fas fa-user"></i>
+                        <input id="formuser" value="" class="forminput" type="textbox" placeholder="Nome" onblur="isEmpty(formuser, nama, 'Nome')" />
+                    </div>
+                    <div id="nama" class="empty"></div>     
+                </article>
+                <article>
+                    <div class="input-container">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input id="formemail" value="" class="forminput" type="textbox" placeholder="Email" onblur="isEmpty(formemail, email, 'email')" />
+                    </div>
+                    <div id="email" class="empty"></div>  
+                </article>
+                <article>
+                    <div class="input-container">
+                        <i class="fa-solid fa-lock"></i>
+                        <input id="formpassword" value="" class="forminput" type="password" placeholder="Senha" onblur="isEmpty(formpassword, password, 'password')" />
+                    </div>
+                    <div id="password" class="empty"></div>  
+                </article>
+            </form>
+            <button id="btn_submit" class="submit">CADASTRAR</button>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
