@@ -8,7 +8,8 @@ body {
 }
 
 .jumbotron {
-    background-image: url(/BIG-ASSETS/JKT48/ponytailtochuchu.png);
+    /* background-image: url(/BIG-ASSETS/JKT48/ponytailtochuchu.png); */
+    background-image: url(/BIG-ASSETS/JKT48/hero03.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: 0 -90px;
@@ -54,6 +55,7 @@ section {
 
 .portfolio {
     background-color: #eee;
+    min-height: 850px;
 }
 
 .portfolio .thumbnail {
