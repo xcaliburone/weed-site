@@ -9,6 +9,18 @@
     height: 600px;
 }
 
+.services {
+    min-height: 600px;
+}
+
+.portfolio {
+    min-height: 800px;
+}
+
+.contact {
+    min-height: 710px;
+}
+
 .parallax-container {
     height: 20%;
 }
