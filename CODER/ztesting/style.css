@@ -1,0 +1,448 @@
+/* CSS RESET */
+html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; 
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* MAIN CSS */
+
+* { box-sizing: border-box; }
+
+body {
+    /* default */
+    font-family: 'Poppins', sans-serif;
+    background-color: #E2CE1A;
+    /* overflow: hidden; */
+
+    /* tambahan css baru */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+
+    /* resp.css */
+    overflow: hidden;
+    height: 100vh;
+
+    /* kesimpulan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh; 
+    overflow: hidden;
+    background-color: #E2CE1A;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.container {
+    /* default */
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* width: 100vw; */
+    /* height: 100vh; */
+    box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.25);
+
+    /* tambahan css baru */
+    flex-direction: column;
+    width: 440px;
+    height: 850px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 8%;
+    min-width: 400px;
+
+    /* resp.css */
+    flex-direction: row;
+    width: 944px;
+    height: 555px;
+    margin: 4%;
+
+    /* kesimpulan */
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    /* width: 440px; */
+    width: 944px;
+    /* height: 850px; */
+    height: 555px;
+    /* min-width: 400px; */
+    /* margin: 8%; */
+    margin: 4%;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* CONTAINER KIRI */
+
+.container-kiri {
+    /* default */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* height: 555px; */
+    /* width: 304px; */
+    background-color: #36320A;
+    color: #FFF;
+    /* border-radius: 16px 0 0 16px; */
+
+    /* tambahan css baru */
+    height: 320px;
+    line-height: 1.4;
+    padding: 25px 60px 0 60px;
+    font-size: 13px;
+
+    /* resp.css */
+    width: 304px;
+    height: 555px;
+    padding: 148px 30px 0 44px;
+
+    /* kesimpulan */
+    width: 304px;
+    /* height: 320px; */
+    height: 555px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #FFF;
+    background-color: #36320A;
+    padding: 148px 30px 0 44px;
+    /* padding: 25px 60px 0 60px; */
+}
+
+.container-kiri .image {
+    display: flex;
+    align-items: center;
+    margin-left: -23px;
+}
+
+.container-kiri .image img { margin-left: -32px; }
+
+.container-kiri .image .balok {
+    width: 62px;
+    height: 5px;
+    background: #C4C4C4;
+    transform: rotate(90.021deg);
+}
+
+.container-kiri h2 {
+    /* default */
+    font-size: 26px;
+    font-weight: 700;
+    margin: 1px 0 0 12px;
+
+    /* tambahan css baru */
+    /* font-size: 26px; */
+    font-size: 20px;
+    /* font-size: 1.5em; */
+    font-weight: 700;
+    margin: 1px 0 0 12px;
+
+    /* resp.css */
+    font-size: 2em;
+
+    /* kesimpulan */
+    font-size: 26px;
+    /* font-size: 2em; */
+    /* font-size: 20px; */
+    font-weight: 700;
+    margin: 1px 0 0 12px;
+}
+
+.container-kiri h3 {
+    /* default */
+    font-size: 23px;
+    font-weight: 500;
+    margin: 0 0 66px 12px;
+
+    /* tambahan css baru */
+    /* font-size: 23px; */
+    font-size: 17px;
+    /* font-size: 1em; */
+    font-weight: 500;
+    margin: 0 0 20px 12px;
+
+    /* resp.css */
+    font-size: 1.77em;
+    margin: 0 0 34px 12px;
+
+    /* kesimpulan */
+    font-size: 23px;
+    /* font-size: 17px; */
+    font-weight: 500;
+    margin: 0 0 66px 12px;
+    /* margin: 0 0 20px 12px; */
+}
+
+.container-kiri p {
+    /* default */
+    font-size: 17px;
+    font-weight: 500;
+    margin: 12px 0 0 22px;
+
+    /* tambahan css baru */
+    /* font-size: 17px; */
+    font-size: 16px;
+    /* font-size: 1.2em; */
+    font-weight: 500;
+    margin: 12px 0 0 22px;
+
+    /* resp.css */
+    font-size: 1.3em;
+
+    /* kesimpulan */
+    font-size: 17px;
+    /* font-size: 16px; */
+    /* font-size: 1.3em; */
+    font-weight: 500;
+    margin: 12px 0 0 22px;
+}
+
+.btn {
+    /* default */
+    width: 232px;
+    height: 70px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 23px;
+    border-radius: 30px;
+
+    /* tambahan css baru */
+    /* width: 232px; */
+    width: 60%;
+    /* width: 20rem; */
+    height: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    /* font-size: 23px; */
+    font-size: 150%;
+    /* font-size: 2em; */
+    border-radius: 30px;
+
+    /* resp.css */
+    width: 232px;
+    height: 70px;   
+    font-size: 23px;
+
+    /* kesimpulan */
+    width: 232px;
+    width: 60%;
+    /* width: 20rem; */
+    height: 70px;
+    height: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 23px;
+    /* font-size: 150%; */
+    /* font-size: 23px; */
+    /* font-size: 2em; */
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+.btn:hover { cursor: pointer; }
+
+.btn.kiri {
+    background: transparent;
+    border: 4px solid #FFF;
+}
+
+/* CONTAINER KANAN */
+
+.container-kanan {
+    /* default */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #FEFAA1;
+    width: 640px;
+    height: 555px;
+    border-radius: 0 16px 16px 0;
+
+    /* tambahan css baru */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    text-align: center;
+    background-color: #FEFAA1;
+    /* width: 68%; */
+    /* width: 640px; */
+    /* height: 555px; */
+
+    /* resp.css */
+    width: 640px;
+
+    /* kesimpulan */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 640px;
+    height: 555px;
+    background-color: #FEFAA1;
+    border-radius: 0 16px 16px 0;
+}
+
+.container-kanan h2 {
+    /* default */
+    font-size: 32px;
+    font-weight: 900;
+    margin-top: 50px;
+
+    /* tambahan css baru */
+    font-size: 32px;
+    font-weight: 900;
+    padding: 50px 0 0 0;
+
+    /* kesimpulan */
+    font-size: 32px;
+    font-weight: 900;
+    margin-top: 50px;
+    padding: 50px 0 0 0;
+}
+
+.container-kanan p {
+    /* default */
+    font-size: 19px;
+    font-weight: 600;
+    margin: -29px 0 30px 0;
+
+    /* tambahan css baru */
+    font-size: 19px;
+    font-weight: 600;
+    padding: 10px 0 25px 0;
+
+    /* kesimpulan */
+    font-size: 19px;
+    font-weight: 600;
+    margin: -29px 0 30px 0;
+    padding: 10px 0 25px 0;
+}
+
+.container-kanan .input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    background-color: #fff;   
+}
+
+.container-kanan .input input {
+    /* default */
+    background-color: #E2CE1A;
+    border: none;
+    width: 400px;
+    height: 60px;
+    font-size: 23px;
+    font-weight: 600;
+
+    /* tambahan css baru */
+    display: inline-block;
+    /* background-color: #E2CE1A; */
+    background-color: aqua;
+    border: none;
+    /* width: 400px; */
+    width: 80%;
+
+    height: 60px;
+    font-size: 23px;
+    font-weight: 600;
+
+    /* kesimpulan */
+    width: 400px;
+    width: 80%;
+    height: 60px;
+    height: 60px;
+    font-size: 23px;
+    font-weight: 600;
+    border: none;
+    display: inline-block;
+    background-color: #E2CE1A;
+}
+
+.container-kanan .input input::placeholder {
+    color: rgba(0, 0, 0, 0.60);
+    font-weight: 800;
+}
+
+.container-kanan .input input:hover { cursor: pointer; }
+
+.container-kanan .input input:focus { outline: 0; }
+
+.container-kanan .input input:-webkit-autofill { transition: background-color 5000s ease-out 0s; }
+
+.container-kanan .input img { margin: 0 10px 0 30px; }
+
+.container-kanan .input .username, .email, .pass {
+    /* default */
+    display: flex;
+    flex-direction: row;
+    width: 480px;
+    height: 60px;
+    background: #E2CE1A;
+    border-radius: 16px;
+    border: 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);   
+    caret-color: #464402;
+    caret-shape: underscore;
+
+    /* tambahan css baru */
+    display: flex;
+    /* width: 480px; */
+    width: 80%;
+    height: 60px;
+    background: #E2CE1A;
+    border-radius: 16px;
+    border: 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);   
+    caret-color: #464402;
+
+    overflow: hidden;
+
+    /* kesimpulan */
+    display: flex;
+    flex-direction: row;
+    width: 480px;
+    /* width: 80%; */
+    height: 60px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 16px;
+    background: #E2CE1A;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);   
+    caret-color: #464402;
+    caret-shape: underscore;
+}
+
+.btn.kanan {
+    background: #36320A;
+    border: 0;
+    margin-top: 10px;
+}
+
+.container-kanan .input .username img, .email img, .pass img {
+    width: 20px;
+}
+
+/* .container-kanan .input input#username { background-image: url(./img/username.svg); }
+
+.container-kanan .input input#email { background-image: url(./img/email.svg); }
+
+.container-kanan .input input#pass { background-image: url(./img/password.svg); } */
+

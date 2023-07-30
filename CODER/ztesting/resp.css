@@ -1,0 +1,87 @@
+/* css dibawah hanya bekerja diatas 768px */
+
+/* dibawah 768px, css dibawah tidak akan berfungsi */
+
+@media (min-width: 768px) {
+    body {
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    .container {
+        flex-direction: row;
+        width: 944px;
+        height: 555px;
+        margin: 4%;
+    }
+
+    /* CONTAINER KIRI */
+
+    .container-kiri {
+        width: 304px;
+        height: 555px;
+        padding: 148px 30px 0 44px;
+    }
+
+    /* .container-kiri .image {.} */
+    /* .container-kiri .image img {.} */
+    /* .container-kiri .image .balok {.} */
+
+    .container-kiri h2 {
+        /* font-size: 26px; */
+        font-size: 2em;
+    }
+
+    .container-kiri h3 {
+        /* font-size: 23px; */
+        font-size: 1.77em;
+        margin: 0 0 34px 12px;
+    }
+
+    .container-kiri p {
+        /* font-size: 17px; */
+        font-size: 1.3em;
+    }
+
+    .btn {
+        width: 232px;
+        height: 70px;   
+        font-size: 23px;
+    }
+
+    /* .btn:hover {.} */
+
+    /* .btn.kiri {.} */
+
+    /* CONTAINER KANAN *//*----------------------------------*/
+
+    .container-kanan {
+        /* width: 68%; */
+       width: 640px;
+        /* width: 100%; */
+        /* display: flex; */
+        /* flex-direction: row; */
+    }
+
+    /* .container-kanan h2 {.}? */
+
+    /* .container-kanan p {.}? */
+
+    /* .container-kanan .input {.} */
+
+    /* .container-kanan .input input {.} */
+
+    /* .container-kanan .input input::placeholder {.} */
+
+    /* .container-kanan .input input:hover {.} */
+
+    /* .container-kanan .input input:focus {.} */
+
+    /* .container-kanan .input input:-webkit-autofill {.} */
+
+    /* .container-kanan .input img {.} */
+    
+    /* .btn.kanan {.} */
+    
+    /* .container-kanan .input .username, .email, .pass {.} */
+}
