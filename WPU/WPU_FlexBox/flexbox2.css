@@ -139,7 +139,7 @@ body {
 
 /* responsive */
 
-/* kalau lebih kecul dari 600px pakai yg diatas */
+/* kalau lebih kecil dari 600px pakai yg diatas */
 @media ( min-width: 600px ) {
     /* kalau 600px keatas pakai css ini */
     
