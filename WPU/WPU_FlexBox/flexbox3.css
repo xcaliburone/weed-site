@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* navbar */
+
+nav {
+    display: flex;
+    background-color: rgb(158, 73, 237);
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    color: rgb(229, 204, 252);
+    position: fixed;
+    width: 100%;
+}
+
+nav .logo {
+    font-family: 'Pacifico', cursive;;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: rgb(229, 204, 252);
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    height: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -4px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(229, 204, 252);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+} /* kalau di ceklis maka cari css yang merupakan sibling / saudara kandung yg merupakan span anak ke 2 */
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+} /* kalau di ceklis maka cari css yang merupakan sibling / saudara kandung yg merupakan span anak ke 2 */
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+} /* kalau di ceklis maka cari css yang merupakan sibling / saudara kandung yg merupakan span anak ke 2 */
+
+/* main */
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(229, 204, 252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 95px;
+}
+
+main .container-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90vw;
+    height: 100vh;
+    gap: 40px 30px; /* row-gap | column-gap */
+    align-content: stretch;
+    overflow: hidden;
+}
+
+main .container-card .card {
+    width: 350px;
+    height: 500px;
+    background-color: brown;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.4);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+main .container-card .card img {
+    object-fit: cover;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+main .container-card .card .card-content {
+    padding: 1rem;
+    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+}
+
+main .container-card .card .card-content .card-title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+}
+
+main .container-card .card .card-content .card-text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    /* margin-bottom: 1.25rem; */
+    font-weight: 400;
+}
+
+main .container-card .card .card-content .btn {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+  }
+  
+main .container-card .card .card-content .btn:hover {
+    /* background-color: rgba(255, 255, 255, 0.12); */
+    background-color: red;
+}
+
+main .container-card .card .card-content table {
+    border: 1;
+}
+
+/* responsive breakpoint */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+    /* kalau 768px kebawah pakai css ini */
+    nav ul {
+        width: 50%;
+    }
+
+    main .container-card {
+        justify-content: center;
+    }
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px) {
+    /* kalau 576px kebawah pakai css ini */
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        padding-top: 25px;
+        right: 0;
+        top: 0;
+        /* height: 100vh; */
+        height: 400px;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        justify-content: space-evenly;
+        z-index: -1;
+        background-color: rgb(158, 73, 237);
+        width: 100%;
+        transform: translateY(-100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    main .container-card {
+        justify-content: center;
+    }
+}
+
+.container-table {
+    text-align: center;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+    padding: 1em 0 0.5em 0;
+}
+
+.container-table th h1 {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    color: rgb(158, 73, 237);
+}
+
+.container-table td {
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.container-table td, .container-table th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left:2%;  
+}
+
+.container-table tr { background-color: rgb(229, 204, 252); }
+
+.container-table th { background-color: rgb(255, 255, 255); }
+
+/* .container-table tr:hover { background-color: #464A52; } */
+
+/* .container-table td:hover {
+    background-color: #FFF842;
+    color: #403E10;
+    font-weight: bold;
+
+    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
+} */
