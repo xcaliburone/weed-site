@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <link rel="shortcut icon" href="/BIG-ASSETS/wpu-website/recoil.png" type="image/x-icon">
+    <title>Belajar React</title>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        
+        function Header({name}) {
+            return(<h1>Belajar React Nih {name ? name : 'Broo'} 🚀</h1>);
+        }
+
+        function HomePage() {
+            const students = ['adhim', 'shani', 'ashel'];
+            const [likes, setLikes] = React.useState(0);
+
+            function handleClick() {
+                setLikes(likes + 1);
+            }
+
+            return(
+                <>
+                    <Header />
+                    <Header name="Ngab" />
+
+                    <ul>
+                        {
+                            students.map((student) => (
+                                <li key={student}>{student}</li>
+                            ))
+                        }
+                    </ul>
+
+                    <button onClick={handleClick}> Likes ({likes}) </button>
+
+                </>
+            )
+        }
+
+        root.render(<HomePage />);
+        
+    </script>
+
+
+
+
+
+        <!-- root.render(<h1>Belajar React Nih Dekk 🚀</h1>);
+
+        root.render(
+            <>
+                <h1 className="header">XCALIBURONE</h1>
+                <img src="/BIG-ASSETS/JKT48/icon-kakigori.png" alt="icon" />
+                <p onClick={e => {alert('ok!')}}>Belajar React itu Mudah</p>
+            </>
+        ) -->
+    
+</body>
+</html>
