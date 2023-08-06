@@ -5,11 +5,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    min-height: 2000px;
 }
 
 /* navbar */
@@ -28,6 +30,16 @@ nav {
 nav .logo {
     font-family: 'Pacifico', cursive;;
     letter-spacing: 3px;
+}
+
+nav .logo a {
+    color: rgb(229, 204, 252);
+    text-decoration: none;
+    cursor: crosshair;
+}
+
+nav .logo a:active {
+    color: rgb(158, 73, 237);
 }
 
 nav ul {
@@ -104,7 +116,6 @@ nav ul li a:hover {
 
 main {
     width: 100vw;
-    height: 100vh;
     background-color: rgb(229, 204, 252);
     display: flex;
     justify-content: center;
@@ -116,9 +127,8 @@ main .container-card {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     width: 90vw;
-    height: 100vh;
     gap: 40px 30px; /* row-gap | column-gap */
     align-content: stretch;
     overflow: hidden;
@@ -127,7 +137,6 @@ main .container-card {
 main .container-card .card {
     width: 350px;
     height: 500px;
-    background-color: brown;
     overflow: hidden;
     box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.4);
     border-radius: 1rem;
@@ -135,12 +144,22 @@ main .container-card .card {
     flex-direction: column;
 }
 
+/* main .container-card .card.choose {
+    box-shadow: inset;
+} */
+
+main .container-card .card .card-image {
+    width: 350px;
+    height: 219px;
+    display: flex;
+}
+
 main .container-card .card img {
     object-fit: cover;
-    height: auto;
     max-width: 100%;
-    vertical-align: middle;
-    cursor: pointer;
+    height: auto;
+    /* height: calc(219px * 2);
+    margin-top: -50px; */
 }
 
 main .container-card .card .card-content {
@@ -154,20 +173,21 @@ main .container-card .card .card-content .card-title {
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: capitalize;
-    margin: 0px;
+    line-height: 2em;
 }
 
 main .container-card .card .card-content .card-text {
     color: #ffffff;
     font-size: 0.875rem;
-    line-height: 1.5;
-    /* margin-bottom: 1.25rem; */
+    line-height: 1.7;
     font-weight: 400;
 }
 
 main .container-card .card .card-content .btn {
     color: #ffffff;
-    padding: 0.8rem;
+    /* padding: 0.8rem; */
+    height: 45px;
+    overflow: hidden;
     font-size: 14px;
     text-transform: uppercase;
     border-radius: 4px;
@@ -177,15 +197,90 @@ main .container-card .card .card-content .btn {
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: transparent;
+    margin-top: .8em;
   }
   
-main .container-card .card .card-content .btn:hover {
-    /* background-color: rgba(255, 255, 255, 0.12); */
-    background-color: red;
+main .container-card .card .card-content .btn:hover { background-color: rgba(255, 255, 255, 0.12); }
+
+main .container-card .card .card-content .btn a {
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-main .container-card .card .card-content table {
-    border: 1;
+main .container-card .card .card-content .container-table {
+    text-align: center;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+    padding: 1em 0 0.5em 0;
+}
+
+main .container-card .card .card-content .container-table th h1 {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    color: rgb(158, 73, 237);
+}
+
+main .container-card .card .card-content .container-table td {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+main .container-card .card .card-content .container-table td, .container-table th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left:2%;  
+}
+
+main .container-card .card .card-content .container-table tr { background-color: rgb(229, 204, 252); }
+
+main .container-card .card .card-content .container-table th { background-color: rgb(255, 255, 255); }
+
+/* main .container-card .card .card-content .container-table tr:hover { background-color: #464A52; } */
+
+/* main .container-card .card .card-content .container-table td:hover {
+    background-color: #FFF842;
+    color: #403E10;
+    font-weight: bold;
+
+    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
+} */
+
+/* footer */
+
+footer {
+    background-color: rgb(158, 73, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    font-family: 'Quicksand';
+}
+
+footer p {
+    font-weight: 500;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 /* responsive breakpoint */
@@ -237,50 +332,3 @@ main .container-card .card .card-content table {
         justify-content: center;
     }
 }
-
-.container-table {
-    text-align: center;
-    overflow: hidden;
-    width: 80%;
-    margin: 0 auto;
-    display: table;
-    padding: 1em 0 0.5em 0;
-}
-
-.container-table th h1 {
-    font-weight: bold;
-    font-size: 1em;
-    text-align: center;
-    color: rgb(158, 73, 237);
-}
-
-.container-table td {
-    font-weight: normal;
-    font-size: 1em;
-}
-
-.container-table td, .container-table th {
-    padding-bottom: 2%;
-    padding-top: 2%;
-    padding-left:2%;  
-}
-
-.container-table tr { background-color: rgb(229, 204, 252); }
-
-.container-table th { background-color: rgb(255, 255, 255); }
-
-/* .container-table tr:hover { background-color: #464A52; } */
-
-/* .container-table td:hover {
-    background-color: #FFF842;
-    color: #403E10;
-    font-weight: bold;
-
-    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
-    transform: translate3d(6px, -6px, 0);
-
-    transition-delay: 0s;
-    transition-duration: 0.4s;
-    transition-property: all;
-    transition-timing-function: line;
-} */
