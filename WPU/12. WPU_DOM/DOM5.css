@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+body {
+    background-color: #ccc;
+    text-align: center;
+}
+
+.container {
+    width: 900px;
+    height: 850px;
+    margin: 15px auto;
+    border: 5px solid white;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+.jumbo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.thumbnails {
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.thumbnails img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.thumb {
+    border: 2px solid white;
+}
+
+.thumb:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards; /* animasi akan berhenti dikeadaan terakhir */
+}
+
+.active {
+    opacity: .5;
+}

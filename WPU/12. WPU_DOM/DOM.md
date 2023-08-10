@@ -144,4 +144,42 @@
 -------------------------------------------------------------------- DOM TRAVERSAL ---------------------------------------------------------------------
 ========================================================================================================================================================
 
-1. 
+1. DOM Traversal ( penelusuran dom )
+2. Kenapa sebuah elemen harus ditelusuri? kenapa tidak diseleksi saja?
+    - lihat DOM4
+3. DOM Traversal Method
+    - parentNode        : mengembalikan hasil berupa node
+    - parentElement     :                            element
+    - nextSibling       : harus saudara kandung dari element yang kita pilih, mengembalikan node
+    - nextElementSibling:                            element
+    - previousSibling   :                            node
+    - previousElementSibling    :                    element
+
+========================================================================================================================================================
+-------------------------------------------------------------------- DOM PREVENT DEFAULT ---------------------------------------------------------------
+========================================================================================================================================================
+
+1. Yaitu cara kita untuk menghentikan aksi default yang dilakukan oleh elemen web kita.
+2. misal terdapat elemen <a></a> dgn class `close` yang dirancang sebagai tombol X close tapi elemen tidak dapat dihapus karena terdapat
+    aksi default dari tag <a> yang dimana a merupakan hyperlink. dan halamannya malah akan di refresh
+    <close.forEach(function(el) {
+        el.addEventListener('click', function(e) {
+            e.target.parentElement.style.display = 'none';
+        });
+    });
+    >
+3. maka,
+    <close.forEach(function(el) {
+        el.addEventListener('click', function(e) {
+            e.target.parentElement.style.display = 'none';
+            e.preventDefault()    //panggil-object-eventnya-lalu-kemudian-tambahkan-sebuah-method
+        });
+    });
+    >
+
+========================================================================================================================================================
+-------------------------------------------------------------------- DOM Event Bubbling ----------------------------------------------------------------
+========================================================================================================================================================
+
+1. Secara default ketika kita memberikan event pada sebuah element, maka event tersebut akan berlaku untuk elemen-elemen pembungkusnya juga.
+2. Jadi seperti `gelembung air` yang semakin keatas, makin keatas terus.
