@@ -1,0 +1,119 @@
+/* menggunakan flexbox, haram float */
+/* pemilihan warna */
+/* tata letak yang pas */
+/* menggunakan font yang pas dengan tema */
+/* penerapan padding dan margin yang pas */
+/* penerapan layout yang responsif
+        - Menggunakan media query untuk menyesuaikan layout pada berbagai ukuran layar device.
+        - Pastikan untuk tidak terdapat konten yang menumpuk maupun keluar dari kontainer ketika dicoba pada dekstop, tablet, dan juga mobile.*/
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aqua;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+header.header {
+    background-color: rgb(48, 93, 78);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(158, 73, 237);
+    justify-content: space-around;
+    height: 45px;
+    align-items: center;
+    color: rgb(229, 204, 252);
+    position: fixed;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 20%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: rgb(229, 204, 252);
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.menu-toggle {
+    height: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -4px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(229, 204, 252);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) { transform-origin: 0 0; }
+
+.menu-toggle span:nth-child(4) { transform-origin: 0 100%; }
+
+.menu-toggle input:checked ~ span:nth-child(2) { background-color: white; transform: rotate(45deg) translate(-1px, -1px); } /* kalau di ceklis maka cari css yang merupakan sibling / saudara kandung yg merupakan span anak ke 2 */
+
+.menu-toggle input:checked ~ span:nth-child(3) { opacity: 0; transform: scale(0); } /* kalau di ceklis maka cari css yang merupakan sibling / saudara kandung yg merupakan span anak ke 3 */
+
+.menu-toggle input:checked ~ span:nth-child(4) { background-color: white; transform: rotate(-45deg) translate(-1px, 0); } /* kalau di ceklis maka cari css yang merupakan sibling / saudara kandung yg merupakan span anak ke 4 */
+
+main {
+    background-color: brown;
+    width: 100%;
+    height: 1000px;
+}
+
+#content {
+    background-color: black;
+}
+
+article {
+    background-color: cadetblue;
+    width: 80%;
+    height: 500px;
+}
+
+footer.footer {
+    background-color: blue;
+    position: static;
+    bottom: 0%;
+    width: 100%;
+    height: 35px;
+}
