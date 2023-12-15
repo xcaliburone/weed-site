@@ -1,14 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Borel&family=Comfortaa:wght@300;400;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-html {
-  font-size: 62.5%;
-}
+html { font-size: 62.5%; }
 
 body {
   font-size: 2.4rem;
@@ -49,9 +43,7 @@ h1 {
   font-size: 2.4rem;
 }
 
-button,
-select,
-input {
+button, select, input {
   background-color: #fefae0;
   font-family: inherit;
   border: none;
