@@ -24,9 +24,7 @@ export default function GroceryList({ items, onDeleteItem, onToggleItem, onClear
     //         checked: false,
     //     },
     // ];
-
     const [sortBy, setSortBy] = useState('input');
-
     let sortedItems;
 
     switch(sortBy) {
