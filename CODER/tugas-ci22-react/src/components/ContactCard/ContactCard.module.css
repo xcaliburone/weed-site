@@ -1,0 +1,55 @@
+.container {
+    width: 100%;
+    background-color: rgb(18, 101, 101);
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.container .cards {
+    display: flex;
+    background-color: cadetblue;
+    flex-wrap: wrap;
+    padding: .3%;
+    justify-content: space-between;
+}
+
+h1 {
+    background-color: brown;
+}
+
+.card {
+    display: flex;
+    background-color: #fff;
+    width: 400px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.card .profile {
+    background-color: blue;
+    flex: 1;
+    width: 120px;
+    height: 120px;
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: blueviolet;
+    flex: 3;
+    padding: 10px 5px;
+}
+
+.card .trashBin {
+    width: 40px;
+    height: 40px;
+    background-color: violet;
+
+}

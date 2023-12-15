@@ -1,127 +1,32 @@
-// dari form yang kemarin, coba buat kek gini.
-// 1. saat tombol login ditekan, kalau ada salah satu field yang kosong (nama / password) munculkan alert ke browser kalau nama harus diisi (kalau nama) atau password harus diisi (kalau password). bebasji bemana pesannya yang penting bedakan nama sama password
-// 2. kalau sukses, munculkan alert kek login berhasil apalah bebas + harus ada dimunculkan nama (atau emailkah apalah itu yg diminta di input) dari usernya. Misal: Login berhasil, selamat datang Sultani!. 
+// saat tombol login (entrar) ditekan, kalau ada salah satu field yang kosong ( nama/password ) munculkun alert ke browser
+// kalau nama harus diisi ( kalau nama ) atau password harus diisi ( kalau password ) bebas pesannya bagaimana asal beda nama dan password
+// kalau sukses, munculkan alert login berhasil bebas + harus ada dimunculkan nama tau email dari user. misal : login berhasil, selamat datang adhim
+// challanges: validasi passwordnya, pass harus minimal 8 karakter, mengandung huruf besar, huruf kecil, dan angka
 
-// challenge:
-// validasi passwordnya, passwordnya harus minimal 8 karakter, mengandung huruf besar, huruf kecil sama angka
+const buttonLogin = document.getElementById('button-login');
+buttonLogin.addEventListener('click', function() {
+    // Ambil nilai dari input field nama atau email dan password
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-document.getElementById("btn_submit").addEventListener('click', function () {
-        const info = [];
-        const nameValue = formuser.value;
-        const emailValue = formemail.value;
-        const passwordValue = formpassword.value;
-
-        if(nameValue === "") {
-            info.push("nama");
-        }
-        if(emailValue === "") {
-            info.push("email");
-        }
-        if(passwordValue === "") {
-            info.push("password");
-        }
-
-        const length = info.length;
-
-        //jika panjang arr info 0, maka value setiap field tidak kosong
-        if(length === 0) {
-            const valid = isValid(passwordValue);
-            //cek valid tidak passwordnya
-            if (valid === "") {
-                Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Akun anda telah disimpan\nSelamat datang ' + nameValue,
-                heightAuto: false,
-                showConfirmButton: false,
-                didOpen: (modal) => {
-                    modal.querySelector('.swal2-title').style.fontSize = '18px';
-                  }
-              })
-            } else {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Something went wrong',
-                    text: "Tolong perhatikan lagi password yang telah dibuat",
-                    heightAuto: false,
-                  });
-            }
-            
-        } else {
-            Swal.fire({
-                icon: 'error',
-                title: 'Something went wrong',
-                text: "Tolong untuk mengisi seluruh field yang ada",
-                heightAuto: false,
-            });
-        }     
+    const trimUsername = username.trim()
+    const trimEmail = email.trim()
+    const trimPass = password.trim()
+    
+    // Periksa apakah salah satu dari field kosong
+    if (trimUsername == "" && trimEmail == "" && trimPass == "") return alert("Semua data harus diisi sebelum login!");
+    if (trimUsername == "") return alert("Nama Pengguna harus diisi sebelum login!");
+    if (trimEmail == "") return alert("Email harus diisi sebelum login!");
+    if (trimPass == "") return alert("Password harus diisi sebelum login!");
+    return validasiPass(username);
 });
 
-const isValid = (pass) => {
-    let text = "Password harus terdapat";
-    let koma = false;
-
-    //kalau tidak ada huruf kecil
-    if (!/[a-z]/.test(pass)) {
-        text += " huruf kecil";
-        koma = true;
-    }
-
-    //kalau tidak ada huruf besar
-    if (!/[A-Z]/.test(pass)) {
-        if (koma) {
-            text += ",";
-        } else {
-            koma = true;
-        }
-        text += " huruf besar";
-    }
-
-    //kalau tidak ada digit (0-9)
-    if (!/\d/.test(pass)) {
-        if (koma) {
-            text += ",";
-        } else {
-            koma = true;
-        }
-        text += " digit";
-    }
-
-    //jika panjang passwordnya lebih kecil dari 8
-    if (pass.length < 8) {
-        if (koma) {
-            text += ",";
-        } else {
-            koma = true;
-        }
-        text += " minimal 8 karakter";
-    }
-
-    //kalau panjangnya tetapji text seperti yang ditetapkan, berarti valid
-    if(text.length === 23) {
-        text = "";
-        return text;
-    }
-    return text;
-
+function validasiPass(username) {
+    const password = document.getElementById('password').value;
+    if (password.length < 8) return alert('Password harus terdiri dari minimal 8 karakter.');
+    if (!/[A-Z]/.test(password)) return alert('Password harus mengandung setidaknya satu huruf besar.');
+    if (!/[a-z]/.test(password)) return alert('Password harus mengandung setidaknya satu huruf kecil.');
+    if (!/\d/.test(password)) return alert('Password harus mengandung setidaknya satu angka.');
+    return alert('Login berhasil. Selamat datang ' + username + '!');
 }
-
-//untuk cek kosong tidak suatu value field
-const isEmpty = (form, element, elementString) => {
-    const inputValue = form.value;
-
-    //kalau kosong kasih info
-    if (inputValue === "") {
-        element.innerHTML = "Bagian " + elementString + " tidak bisa kosong";
-    } else if (elementString === "password") { //kalau password, infonya ada tambahan
-        const text = isValid(inputValue);
-        if (text === "") { // kosong artinya valid
-            element.innerHTML = "";
-        } else {
-            element.innerHTML = text;
-        }
-    } else { //inputnya tidak kosong
-        element.innerHTML = "";
-    }
-};
-
