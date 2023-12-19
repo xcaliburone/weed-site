@@ -1,0 +1,272 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;;
+}
+
+header {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #164863;
+    color: #9BBEC8;
+}
+
+header h1 {
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+
+header nav {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #427D9D;
+}
+
+header nav ul {
+    width: 25%;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+header nav ul li a {
+    color: #DDF2FD;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+header .menu-toggle {
+    height: 20px;
+    margin: 12px 20px;
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .menu-toggle input {
+    width: 40px;
+    height: 28px;
+    position: absolute;
+    top: -4px;
+    left: -6px;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+header .menu-toggle span {
+    width: 28px;
+    height: 3px;
+    display: block;
+    border-radius: 3px;
+    transition: all 0.5s;
+    background-color: #9BBEC8;
+}
+
+header .menu-toggle span:nth-child(2) { transform-origin: 0 0; }
+header .menu-toggle span:nth-child(4) { transform-origin: 0 100%; }
+
+header .menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+    background-color: white;
+} /* kalau di ceklis maka cari css yang merupakan sibling / saudara kandung yg merupakan span anak ke 2, dst */
+
+header .menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+header .menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+    background-color: white;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 105px 0 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #DDF2FD;
+}
+
+hr {
+    border: none;
+    border-top: 3px solid #DDF2FD;
+}
+
+#content {
+    width: 70%;
+    height: 596px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 16px 0 0 16px;
+    overflow-y: scroll;
+    background-color: #9BBEC8;
+}
+
+#content .penulis {
+    margin-top: -20px;
+    font-size: 15px;
+}
+
+#content .penulis a {
+    font-weight: 700;
+    color: #164863;
+    text-decoration: none;
+}
+
+#content p {
+    font-size: 1em;
+    text-align: justify;
+}
+
+article.main {
+    width: 100%;
+    background-color: #9BBEC8;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+}
+
+article.main p {
+    margin: 13px 0;
+}
+
+article.aside {
+    line-height: 1.6em;
+    letter-spacing: 0.5px;
+    font-size: 0.9em;
+}
+
+aside {
+    width: 300px;
+    height: 596px;
+    padding: 35px 25px 35px 25px;
+    background-color: #427D9D;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    border-radius: 0 16px 16px 0;
+}
+
+aside figure img {
+    width: 255px;
+    background-color: #DDF2FD;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.social-media {
+    margin: 20px 0;
+    display: flex;
+}
+
+.social-media a {
+    width: 40px;
+    height: 40px;
+    margin: 25px 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #164863;
+    border-radius: 50%;
+    border: 1px solid #9BBEC8;
+}
+
+.fa:hover { opacity: 0.7; }
+
+footer {
+    width: 100%;
+    height: 40px;
+    position: static;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9BBEC8;
+    background-color: #164863;
+}
+
+@media screen and (max-width: 768px) { /* kalau 768px kebawah pakai css ini */
+    header nav ul { width: 50%; }
+    #content { width: 50%; }
+    #content h1 { font-size: 1.5em; }
+    #content .penulis { font-size: 13px; }
+    #content h3 { font-size: 1.2em; }
+}
+
+@media screen and (max-width: 576px) { /* kalau 576px kebawah pakai css ini */
+    header {
+        align-items: center;
+        height: 50px;
+    }
+
+    header .menu-toggle { display: flex; }
+
+    header nav { display: none; }
+
+    header nav.display {
+        display: flex;
+        bottom: -30px;
+    }
+
+    header h1 { font-size: 1.2em; }
+
+    header nav ul {
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        align-items: center;
+        flex-direction: column;
+        background-color: #427D9D;
+        justify-content: space-evenly;
+        transform: translateY(-100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    header nav ul.slide {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    main {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #content {
+        width: 300px;
+        height: 596px;
+        border-radius: 16px;
+    }
+
+    #content h1 { font-size: 1.2em; }
+    #content h3 { font-size: 1em; }
+    #content p { font-size: 0.9em; }
+    aside { border-radius: 16px; }
+    aside figure img { width: 240px; }
+}
