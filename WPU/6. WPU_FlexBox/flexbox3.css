@@ -60,7 +60,7 @@ nav ul li a:hover {
 }
 
 /* Hamburger Menu */
-.menu-toggle {
+header .menu-toggle {
     height: 20px;
     display: none;
     flex-direction: column;
